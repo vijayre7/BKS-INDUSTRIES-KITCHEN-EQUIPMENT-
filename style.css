@@ -1,40 +1,42 @@
-/* BKS Industries - Modern Commercial Kitchen & SS Fabrication Design System */
+/* BKS Industries - Ultra-Modern Glassmorphism Commercial Kitchen Design System */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --bg-main: #f8fafc;
-  --bg-card: #ffffff;
-  --bg-dark: #0f172a;
-  --bg-dark-secondary: #1e293b;
+  --bg-main: #080c14;
+  --bg-card: rgba(15, 23, 42, 0.65);
+  --bg-card-hover: rgba(30, 41, 59, 0.75);
+  --bg-dark: #090d16;
+  --bg-dark-secondary: #0f172a;
   
   --primary: #0284c7;
   --primary-hover: #0369a1;
-  --primary-light: #e0f2fe;
+  --primary-light: rgba(2, 132, 199, 0.18);
   
   --accent: #f59e0b;
-  --accent-hover: #d97706;
-  --accent-light: #fef3c7;
+  --accent-hover: #fbbf24;
+  --accent-light: rgba(245, 158, 11, 0.18);
   
-  --steel: #64748b;
-  --steel-light: #f1f5f9;
-  --steel-border: #e2e8f0;
+  --steel: #94a3b8;
+  --steel-light: rgba(255, 255, 255, 0.05);
+  --steel-border: rgba(255, 255, 255, 0.12);
   
-  --text-dark: #0f172a;
-  --text-muted: #64748b;
-  --text-light: #f8fafc;
+  --text-dark: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-light: #ffffff;
   
   --success: #10b981;
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
   --radius-full: 9999px;
   
-  --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 20px 35px -10px rgba(15, 23, 42, 0.12);
-  --shadow-glow: 0 0 25px rgba(245, 158, 11, 0.25);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 45px -10px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 30px rgba(245, 158, 11, 0.3);
+  --glass-glow: inset 0 1px 0 0 rgba(255, 255, 255, 0.18);
   
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -51,6 +53,11 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-main);
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(2, 132, 199, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 90% 40%, rgba(245, 158, 11, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 20% 85%, rgba(16, 185, 129, 0.1) 0%, transparent 45%);
+  background-attachment: fixed;
   color: var(--text-dark);
   line-height: 1.6;
   overflow-x: hidden;
@@ -87,9 +94,9 @@ button {
 
 /* Top Announcement Bar Glass */
 .top-bar {
-  background: rgba(15, 23, 42, 0.92);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  background: rgba(8, 12, 20, 0.85);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   color: #94a3b8;
   font-size: 0.875rem;
   padding: 0.5rem 1rem;
@@ -125,17 +132,17 @@ button {
 }
 
 .badge-gold {
-  background: rgba(245, 158, 11, 0.15);
+  background: rgba(245, 158, 11, 0.18);
   color: var(--accent);
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  padding: 0.15rem 0.6rem;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  padding: 0.18rem 0.7rem;
   border-radius: var(--radius-full);
   font-weight: 600;
   font-size: 0.75rem;
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.2);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.25);
 }
 
 /* Glassmorphism Header Navbar */
@@ -143,20 +150,20 @@ button {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.75);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  backdrop-filter: blur(16px) saturate(180%);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
-  box-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.06), inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  background: rgba(11, 15, 25, 0.75);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar.navbar-scrolled {
-  background: rgba(255, 255, 255, 0.88);
-  -webkit-backdrop-filter: blur(20px) saturate(200%);
-  backdrop-filter: blur(20px) saturate(200%);
-  border-bottom: 1px solid rgba(2, 132, 199, 0.25);
-  box-shadow: 0 12px 40px 0 rgba(15, 23, 42, 0.12), inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+  background: rgba(8, 12, 20, 0.92);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  backdrop-filter: blur(24px) saturate(200%);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .nav-container {
@@ -178,11 +185,11 @@ button {
   height: 44px;
   width: auto;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 10px;
   background: #ffffff;
   padding: 3px 6px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--steel-border);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.2);
   transition: var(--transition);
 }
 
@@ -194,7 +201,7 @@ button {
   font-family: 'Outfit', sans-serif;
   font-weight: 900;
   font-size: 1.35rem;
-  color: var(--bg-dark);
+  color: #ffffff;
   letter-spacing: -0.02em;
 }
 
@@ -216,25 +223,28 @@ button {
 .nav-link {
   font-weight: 600;
   font-size: 0.92rem;
-  color: var(--text-dark);
+  color: #cbd5e1;
   transition: var(--transition);
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.8rem;
+  border-radius: var(--radius-full);
 }
 
 .nav-link:hover, .nav-link.active {
-  color: var(--primary);
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .nav-link.active::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 15%;
+  width: 70%;
   height: 2px;
-  background: var(--primary);
+  background: var(--accent);
   border-radius: 2px;
+  box-shadow: 0 0 8px var(--accent);
 }
 
 .nav-actions {
@@ -257,41 +267,48 @@ button {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #d97706 100%);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+  box-shadow: 0 6px 25px rgba(245, 158, 11, 0.55);
 }
 
 .btn-outline {
-  background: transparent;
-  color: var(--bg-dark);
-  border: 2px solid var(--steel-border);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .btn-outline:hover {
   border-color: var(--primary);
   color: var(--primary);
-  background: var(--primary-light);
+  background: rgba(2, 132, 199, 0.15);
+  box-shadow: 0 0 15px rgba(2, 132, 199, 0.3);
 }
 
 .btn-dark {
-  background: var(--bg-dark);
+  background: rgba(15, 23, 42, 0.85);
   color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .btn-dark:hover {
-  background: var(--bg-dark-secondary);
+  background: rgba(30, 41, 59, 0.95);
 }
 
 .cart-btn {
   position: relative;
-  background: var(--steel-light);
-  border: 1px solid var(--steel-border);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   width: 44px;
   height: 44px;
   border-radius: var(--radius-md);
@@ -299,13 +316,14 @@ button {
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
-  color: var(--bg-dark);
+  color: #ffffff;
   transition: var(--transition);
 }
 
 .cart-btn:hover {
-  background: var(--primary-light);
+  background: rgba(2, 132, 199, 0.2);
   color: var(--primary);
+  border-color: var(--primary);
 }
 
 .cart-badge {
@@ -322,13 +340,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
 }
 
 .mobile-menu-btn {
   display: none;
   font-size: 1.4rem;
   background: none;
-  color: var(--bg-dark);
+  color: #ffffff;
   padding: 0.4rem;
 }
 
@@ -336,8 +355,9 @@ button {
 .mobile-nav-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(4px);
+  background: rgba(8, 12, 20, 0.8);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   z-index: 250;
   opacity: 0;
   pointer-events: none;
@@ -355,10 +375,13 @@ button {
   left: -320px;
   width: 300px;
   height: 100vh;
-  background: var(--bg-dark);
+  background: rgba(15, 23, 42, 0.95);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   color: #ffffff;
   z-index: 251;
-  box-shadow: 10px 0 30px rgba(0,0,0,0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 10px 0 40px rgba(0,0,0,0.5);
   transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
@@ -399,10 +422,10 @@ button {
   color: var(--accent);
 }
 
-/* Hero Section */
+/* Hero Section Glass Theme */
 .hero-section {
   position: relative;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f172a 100%);
+  background: transparent;
   color: #ffffff;
   padding: 5rem 1.5rem 6rem;
   overflow: hidden;
@@ -414,8 +437,8 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
-              radial-gradient(circle at 20% 80%, rgba(2, 132, 199, 0.15) 0%, transparent 50%);
+  background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 20% 80%, rgba(2, 132, 199, 0.18) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -435,13 +458,15 @@ button {
   align-items: center;
   gap: 0.5rem;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   padding: 0.4rem 1rem;
   border-radius: var(--radius-full);
   font-size: 0.875rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+  box-shadow: var(--glass-glow);
 }
 
 .hero-badge-pill i {
@@ -482,7 +507,7 @@ button {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .stat-item {
@@ -512,8 +537,8 @@ button {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .hero-image-card img {
@@ -530,12 +555,13 @@ button {
 
 .floating-glass-card {
   position: absolute;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(15, 23, 42, 0.75);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 1rem 1.25rem;
   border-radius: var(--radius-md);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4), var(--glass-glow);
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -557,9 +583,10 @@ button {
   font-size: 0.9rem;
 }
 
-/* Section Styling */
+/* Section Styling Glass */
 .section {
   padding: 5rem 1.5rem;
+  position: relative;
 }
 
 .section-header {
@@ -569,7 +596,7 @@ button {
 }
 
 .section-subtitle {
-  color: var(--primary);
+  color: var(--accent);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.85rem;
@@ -579,7 +606,7 @@ button {
 
 .section-title {
   font-size: 2.4rem;
-  color: var(--bg-dark);
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
@@ -588,7 +615,7 @@ button {
   font-size: 1.05rem;
 }
 
-/* Catalog Filter Bar */
+/* Catalog Filter Bar Glass */
 .catalog-controls {
   max-width: 1280px;
   margin: 0 auto 2.5rem;
@@ -601,23 +628,30 @@ button {
 
 .search-box {
   position: relative;
-  min-width: 280px;
+  min-width: 300px;
 }
 
 .search-box input {
   width: 100%;
   padding: 0.75rem 1rem 0.75rem 2.6rem;
-  border: 1px solid var(--steel-border);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-md);
   font-size: 0.95rem;
-  background: #ffffff;
+  background: rgba(15, 23, 42, 0.7);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
   transition: var(--transition);
+}
+
+.search-box input::placeholder {
+  color: #64748b;
 }
 
 .search-box input:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.25);
 }
 
 .search-box i {
@@ -630,35 +664,39 @@ button {
 
 .category-tabs {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.6rem;
   overflow-x: auto;
   padding-bottom: 0.5rem;
 }
 
 .category-tab {
   padding: 0.6rem 1.2rem;
-  background: #ffffff;
-  border: 1px solid var(--steel-border);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-radius: var(--radius-full);
   font-weight: 600;
   font-size: 0.88rem;
-  color: var(--text-muted);
+  color: #cbd5e1;
   white-space: nowrap;
   transition: var(--transition);
 }
 
 .category-tab:hover {
-  border-color: var(--primary);
-  color: var(--primary);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(245, 158, 11, 0.15);
 }
 
 .category-tab.active {
-  background: var(--bg-dark);
+  background: var(--accent);
   color: #ffffff;
-  border-color: var(--bg-dark);
+  border-color: var(--accent);
+  box-shadow: 0 0 18px rgba(245, 158, 11, 0.4);
 }
 
-/* Equipment Catalog Grid */
+/* Equipment Catalog Grid Glass Cards */
 .catalog-grid {
   max-width: 1280px;
   margin: 0 auto;
@@ -668,11 +706,13 @@ button {
 }
 
 .equipment-card {
-  background: #ffffff;
+  background: rgba(15, 23, 42, 0.65);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--steel-border);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), var(--glass-glow);
   transition: var(--transition);
   display: flex;
   flex-direction: column;
@@ -680,15 +720,15 @@ button {
 
 .equipment-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(2, 132, 199, 0.3);
+  box-shadow: 0 20px 45px rgba(245, 158, 11, 0.25), var(--glass-glow);
+  border-color: rgba(245, 158, 11, 0.4);
 }
 
 .card-image-wrap {
   position: relative;
   height: 220px;
   overflow: hidden;
-  background: #f1f5f9;
+  background: #0f172a;
 }
 
 .card-image-wrap img {
@@ -707,8 +747,10 @@ button {
   top: 1rem;
   left: 1rem;
   background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(6px);
-  color: #ffffff;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: var(--accent);
+  border: 1px solid rgba(245, 158, 11, 0.3);
   padding: 0.3rem 0.8rem;
   border-radius: var(--radius-full);
   font-size: 0.75rem;
@@ -725,7 +767,7 @@ button {
 
 .card-title {
   font-size: 1.2rem;
-  color: var(--bg-dark);
+  color: #ffffff;
   margin-bottom: 0.4rem;
 }
 
@@ -739,7 +781,7 @@ button {
 
 .card-specs-list li {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: #cbd5e1;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -753,7 +795,7 @@ button {
 .card-footer {
   margin-top: auto;
   padding-top: 1rem;
-  border-top: 1px solid var(--steel-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -766,7 +808,7 @@ button {
 
 .price-label {
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: #94a3b8;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -775,12 +817,10 @@ button {
   font-family: 'Outfit', sans-serif;
   font-weight: 800;
   font-size: 1.15rem;
-  color: var(--accent-hover);
+  color: var(--accent);
 }
 
-/* ------------------------------------------------------------- */
-/* Commercial Kitchen Blog & Knowledge Hub Styles */
-/* ------------------------------------------------------------- */
+/* Commercial Kitchen Blog Glass Cards */
 .blogs-grid {
   max-width: 1280px;
   margin: 0 auto;
@@ -790,11 +830,13 @@ button {
 }
 
 .blog-card {
-  background: #ffffff;
+  background: rgba(15, 23, 42, 0.65);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--steel-border);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), var(--glass-glow);
   transition: var(--transition);
   display: flex;
   flex-direction: column;
@@ -802,7 +844,7 @@ button {
 
 .blog-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 20px 45px rgba(245, 158, 11, 0.25);
   border-color: rgba(245, 158, 11, 0.4);
 }
 
@@ -852,14 +894,14 @@ button {
 
 .blog-title {
   font-size: 1.15rem;
-  color: var(--bg-dark);
+  color: #ffffff;
   margin-bottom: 0.6rem;
   line-height: 1.35;
 }
 
 .blog-summary {
   font-size: 0.88rem;
-  color: var(--text-muted);
+  color: #94a3b8;
   margin-bottom: 1.5rem;
   line-height: 1.5;
   display: -webkit-box;
@@ -871,13 +913,13 @@ button {
 
 .blog-article-content h3 {
   font-size: 1.3rem;
-  color: #0f172a;
+  color: #ffffff;
   margin: 1.2rem 0 0.6rem;
 }
 
 .blog-article-content h4 {
   font-size: 1.05rem;
-  color: #0f172a;
+  color: #ffffff;
   margin: 1rem 0 0.4rem;
 }
 
@@ -890,9 +932,7 @@ button {
   margin-bottom: 0.4rem;
 }
 
-/* ------------------------------------------------------------- */
-/* Interactive 2D Visual Kitchen Layout Planner Styles */
-/* ------------------------------------------------------------- */
+/* 2D Visual Kitchen Layout Planner Glass */
 .planner-section {
   padding: 5rem 1.5rem;
 }
@@ -906,8 +946,10 @@ button {
 }
 
 .planner-control-bar {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(15, 23, 42, 0.75);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius-md);
   padding: 1rem 1.5rem;
   display: flex;
@@ -944,6 +986,7 @@ button {
   background: var(--accent);
   color: #ffffff;
   border-color: var(--accent);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.4);
 }
 
 .planner-dimensions-inputs {
@@ -956,8 +999,8 @@ button {
 
 .planner-dimensions-inputs input {
   width: 65px;
-  background: #0f172a;
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255,255,255,0.25);
   color: #ffffff;
   padding: 0.3rem 0.5rem;
   border-radius: 6px;
@@ -973,8 +1016,10 @@ button {
 }
 
 .planner-palette-sidebar {
-  background: rgba(30, 41, 59, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(15, 23, 42, 0.75);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-lg);
   padding: 1.25rem;
   display: flex;
@@ -1005,7 +1050,7 @@ button {
   align-items: center;
   gap: 0.75rem;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 0.6rem 0.8rem;
   border-radius: var(--radius-md);
   cursor: pointer;
@@ -1013,7 +1058,7 @@ button {
 }
 
 .planner-palette-item:hover {
-  background: rgba(2, 132, 199, 0.15);
+  background: rgba(2, 132, 199, 0.2);
   border-color: var(--primary);
   transform: translateX(4px);
 }
@@ -1026,8 +1071,10 @@ button {
 }
 
 .planner-canvas-container {
-  background: #020617;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(2, 6, 23, 0.85);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
   position: relative;
@@ -1038,7 +1085,7 @@ button {
 .planner-canvas-grid {
   display: grid;
   gap: 6px;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 0);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 0);
   background-size: 20px 20px;
   min-height: 450px;
   position: relative;
@@ -1051,7 +1098,7 @@ button {
   position: absolute;
   top: 8px;
   left: 8px;
-  background: rgba(15, 23, 42, 0.9);
+  background: rgba(15, 23, 42, 0.95);
   color: var(--accent);
   font-size: 0.75rem;
   font-weight: 700;
@@ -1063,7 +1110,7 @@ button {
 }
 
 .planner-placed-node {
-  background: linear-gradient(135deg, rgba(2, 132, 199, 0.85) 0%, rgba(15, 23, 42, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
   border: 1px solid rgba(56, 189, 248, 0.5);
   border-radius: 8px;
   padding: 0.6rem;
@@ -1101,7 +1148,7 @@ button {
   position: absolute;
   top: 4px;
   right: 4px;
-  background: rgba(239, 68, 68, 0.8);
+  background: rgba(239, 68, 68, 0.85);
   color: #ffffff;
   width: 18px;
   height: 18px;
@@ -1115,7 +1162,9 @@ button {
 }
 
 .planner-analytics-bar {
-  background: rgba(30, 41, 59, 0.9);
+  background: rgba(15, 23, 42, 0.85);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-md);
   padding: 1.25rem 1.5rem;
@@ -1144,9 +1193,7 @@ button {
   color: #ffffff;
 }
 
-/* ------------------------------------------------------------- */
-/* Commercial Kitchen Calculators Section Styles */
-/* ------------------------------------------------------------- */
+/* Commercial Kitchen Calculators Glass */
 .calculators-grid {
   max-width: 1280px;
   margin: 0 auto;
@@ -1156,13 +1203,16 @@ button {
 }
 
 .calc-card {
-  background: #ffffff;
+  background: rgba(15, 23, 42, 0.65);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--steel-border);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 2rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), var(--glass-glow);
   display: flex;
   flex-direction: column;
+  color: #ffffff;
 }
 
 .calc-card-header {
@@ -1172,7 +1222,7 @@ button {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
   padding-bottom: 0.8rem;
-  border-bottom: 1px solid var(--steel-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .calc-card-header i {
@@ -1184,8 +1234,8 @@ button {
 }
 
 .calc-results-box {
-  background: var(--steel-light);
-  border: 1px solid var(--steel-border);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-md);
   padding: 1.2rem;
   margin-top: auto;
@@ -1198,17 +1248,16 @@ button {
   display: flex;
   justify-content: space-between;
   font-size: 0.92rem;
-  color: var(--text-dark);
+  color: #cbd5e1;
 }
 
-/* ------------------------------------------------------------- */
-/* Interactive Spec Customizer Modal Styles */
-/* ------------------------------------------------------------- */
+/* Interactive Spec Customizer Modal Glass */
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(6px);
+  background: rgba(8, 12, 20, 0.85);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   z-index: 300;
   display: flex;
   align-items: center;
@@ -1218,12 +1267,16 @@ button {
 }
 
 .modal-card {
-  background: #ffffff;
-  border-radius: 20px;
-  max-width: 720px;
+  background: rgba(15, 23, 42, 0.95);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-radius: 24px;
+  max-width: 760px;
   width: 100%;
   padding: 2rem;
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6), var(--glass-glow);
   position: relative;
 }
 
@@ -1231,31 +1284,32 @@ button {
   position: absolute;
   top: 1.2rem;
   right: 1.2rem;
-  background: #f1f5f9;
+  background: rgba(255, 255, 255, 0.1);
   border: none;
   width: 36px;
   height: 36px;
   border-radius: 50%;
   font-size: 1.2rem;
   cursor: pointer;
-  color: var(--bg-dark);
+  color: #ffffff;
   transition: var(--transition);
 }
 
 .modal-close-btn:hover {
-  background: #e2e8f0;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .badge-tag {
-  background: #e0f2fe;
-  color: #0284c7;
+  background: rgba(2, 132, 199, 0.2);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
   padding: 0.25rem 0.6rem;
   border-radius: 99px;
   font-weight: 700;
   font-size: 0.75rem;
 }
 
-/* Toast Notifications */
+/* Toast Notifications Glass */
 .toast-container {
   position: fixed;
   bottom: 2rem;
@@ -1268,10 +1322,13 @@ button {
 }
 
 .toast-message {
-  background: var(--bg-dark);
+  background: rgba(15, 23, 42, 0.9);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   color: #ffffff;
   padding: 0.8rem 1.2rem;
   border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-left: 4px solid var(--accent);
   box-shadow: var(--shadow-lg);
   font-size: 0.9rem;
@@ -1289,19 +1346,21 @@ button {
   opacity: 1;
 }
 
-/* Configurator Card */
+/* Configurator Card Glass */
 .configurator-section {
-  background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);
+  background: transparent;
   position: relative;
 }
 
 .configurator-card {
   max-width: 1100px;
   margin: 0 auto;
-  background: #ffffff;
+  background: rgba(15, 23, 42, 0.65);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--steel-border);
-  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.5), var(--glass-glow);
   overflow: hidden;
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -1314,7 +1373,7 @@ button {
 .config-step-title {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--bg-dark);
+  color: #ffffff;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -1342,9 +1401,9 @@ button {
 
 .type-option-btn {
   padding: 1rem;
-  border: 2px solid var(--steel-border);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-md);
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
   text-align: left;
   transition: var(--transition);
   display: flex;
@@ -1353,23 +1412,25 @@ button {
 }
 
 .type-option-btn:hover {
-  border-color: var(--primary);
+  border-color: var(--accent);
+  background: rgba(245, 158, 11, 0.1);
 }
 
 .type-option-btn.selected {
   border-color: var(--accent);
-  background: var(--accent-light);
+  background: rgba(245, 158, 11, 0.18);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.25);
 }
 
 .type-name {
   font-weight: 700;
   font-size: 0.95rem;
-  color: var(--bg-dark);
+  color: #ffffff;
 }
 
 .type-sub {
   font-size: 0.78rem;
-  color: var(--text-muted);
+  color: #94a3b8;
 }
 
 .size-slider-wrap {
@@ -1381,7 +1442,7 @@ button {
   justify-content: space-between;
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: #ffffff;
   margin-bottom: 0.6rem;
 }
 
@@ -1404,7 +1465,9 @@ button {
   font-weight: 500;
   padding: 0.6rem 0.8rem;
   border-radius: var(--radius-sm);
-  background: var(--steel-light);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
   cursor: pointer;
 }
 
@@ -1414,9 +1477,10 @@ button {
   height: 16px;
 }
 
-/* Config Summary Pane */
+/* Config Summary Pane Glass */
 .config-summary-pane {
-  background: var(--bg-dark);
+  background: rgba(8, 12, 20, 0.9);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
   color: #ffffff;
   padding: 2.5rem;
   display: flex;
@@ -1452,7 +1516,7 @@ button {
 
 .summary-total-box {
   background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-md);
   padding: 1.25rem;
   margin-bottom: 1.5rem;
@@ -1472,7 +1536,7 @@ button {
   color: var(--accent);
 }
 
-/* Reviews Grid */
+/* Reviews Grid Glass */
 .reviews-grid {
   max-width: 1280px;
   margin: 0 auto;
@@ -1482,11 +1546,13 @@ button {
 }
 
 .review-card {
-  background: #ffffff;
+  background: rgba(15, 23, 42, 0.65);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--steel-border);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 2rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), var(--glass-glow);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1496,7 +1562,7 @@ button {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  color: #4285F4;
+  color: #38bdf8;
   font-size: 1.2rem;
 }
 
@@ -1508,7 +1574,7 @@ button {
 
 .review-text {
   font-size: 0.95rem;
-  color: var(--text-dark);
+  color: #cbd5e1;
   font-style: italic;
   margin-bottom: 1.5rem;
   flex: 1;
@@ -1516,27 +1582,28 @@ button {
 
 .reviewer-name {
   font-weight: 700;
-  color: var(--bg-dark);
+  color: #ffffff;
   font-size: 0.95rem;
 }
 
 .reviewer-location {
   font-size: 0.78rem;
-  color: var(--text-muted);
+  color: #94a3b8;
 }
 
-/* Gallery Showcase */
+/* Gallery Showcase Glass */
 .gallery-grid {
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .gallery-item {
   position: relative;
   border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   overflow: hidden;
   height: 240px;
   cursor: pointer;
@@ -1552,7 +1619,7 @@ button {
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(15, 23, 42, 0.85) 100%);
+  background: linear-gradient(180deg, transparent 40%, rgba(8, 12, 20, 0.9) 100%);
   display: flex;
   align-items: flex-end;
   padding: 1.2rem;
@@ -1574,7 +1641,7 @@ button {
   font-size: 1rem;
 }
 
-/* Contact Section */
+/* Contact Section Glass */
 .contact-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -1584,13 +1651,17 @@ button {
 }
 
 .contact-info-card {
-  background: var(--bg-dark);
+  background: rgba(15, 23, 42, 0.75);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: #ffffff;
   border-radius: var(--radius-lg);
   padding: 3rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.5), var(--glass-glow);
 }
 
 .info-item {
@@ -1615,6 +1686,7 @@ button {
 .info-details h4 {
   font-size: 1.1rem;
   margin-bottom: 0.2rem;
+  color: #ffffff;
 }
 
 .info-details p {
@@ -1623,11 +1695,13 @@ button {
 }
 
 .contact-form-card {
-  background: #ffffff;
+  background: rgba(15, 23, 42, 0.65);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--steel-border);
   padding: 3rem;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.5), var(--glass-glow);
 }
 
 .form-group {
@@ -1639,31 +1713,37 @@ button {
   font-weight: 600;
   font-size: 0.88rem;
   margin-bottom: 0.4rem;
-  color: var(--bg-dark);
+  color: #ffffff;
 }
 
 .form-control {
   width: 100%;
   padding: 0.8rem 1rem;
-  border: 1px solid var(--steel-border);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-md);
   font-size: 0.95rem;
   font-family: inherit;
+  background: rgba(15, 23, 42, 0.8);
+  color: #ffffff;
   transition: var(--transition);
+}
+
+.form-control::placeholder {
+  color: #64748b;
 }
 
 .form-control:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.25);
 }
 
-/* Footer */
+/* Footer Glass */
 footer {
-  background: #090d16;
+  background: rgba(4, 7, 13, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #94a3b8;
   padding: 4rem 1.5rem 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-container {
@@ -1708,7 +1788,7 @@ footer {
   max-width: 1280px;
   margin: 0 auto;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1716,12 +1796,13 @@ footer {
   color: #64748b;
 }
 
-/* Quote Slide-Over Drawer */
+/* Quote Slide-Over Drawer Glass */
 .drawer-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(4px);
+  background: rgba(8, 12, 20, 0.75);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   z-index: 200;
   opacity: 0;
   pointer-events: none;
@@ -1740,12 +1821,16 @@ footer {
   width: 100%;
   max-width: 440px;
   height: 100vh;
-  background: #ffffff;
+  background: rgba(15, 23, 42, 0.96);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
   z-index: 201;
-  box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+  box-shadow: -10px 0 40px rgba(0,0,0,0.6);
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
+  color: #ffffff;
 }
 
 .quote-drawer.active {
@@ -1754,11 +1839,11 @@ footer {
 
 .drawer-header {
   padding: 1.5rem;
-  border-bottom: 1px solid var(--steel-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--bg-dark);
+  background: rgba(8, 12, 20, 0.9);
   color: #ffffff;
 }
 
@@ -1770,8 +1855,8 @@ footer {
 
 .drawer-footer {
   padding: 1.5rem;
-  border-top: 1px solid var(--steel-border);
-  background: var(--steel-light);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(8, 12, 20, 0.9);
 }
 
 /* Floating Quick Actions */
@@ -1804,10 +1889,12 @@ footer {
 
 .btn-whatsapp {
   background: #25D366;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
 }
 
 .btn-phone {
   background: var(--primary);
+  box-shadow: 0 0 20px rgba(2, 132, 199, 0.4);
 }
 
 @keyframes fadeIn {

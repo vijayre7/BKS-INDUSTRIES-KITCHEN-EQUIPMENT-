@@ -1330,25 +1330,25 @@ function openBlogModal(id) {
         <button onclick="closeBlogModal()" class="modal-close-btn">&times;</button>
         
         <div style="margin-bottom: 1.2rem;">
-          <span class="badge-tag" style="background: #fef3c7; color: #b45309;"><i class="fa-solid fa-bookmark"></i> ${article.category}</span>
-          <h2 style="font-size: 1.6rem; color: #0f172a; margin: 0.6rem 0;">${article.title}</h2>
-          <div style="font-size: 0.85rem; color: #64748b; display: flex; gap: 1.2rem; align-items: center;">
-            <span><i class="fa-solid fa-user-gear" style="color: var(--primary);"></i> ${article.author}</span>
+          <span class="badge-tag" style="background: rgba(245, 158, 11, 0.18); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.35);"><i class="fa-solid fa-bookmark"></i> ${article.category}</span>
+          <h2 style="font-size: 1.6rem; color: #ffffff; margin: 0.6rem 0;">${article.title}</h2>
+          <div style="font-size: 0.85rem; color: #94a3b8; display: flex; gap: 1.2rem; align-items: center;">
+            <span><i class="fa-solid fa-user-gear" style="color: var(--accent);"></i> ${article.author}</span>
             <span><i class="fa-regular fa-calendar"></i> ${article.date}</span>
             <span><i class="fa-regular fa-clock"></i> ${article.readTime}</span>
           </div>
         </div>
 
-        <img src="${article.image}" style="width: 100%; height: 280px; object-fit: cover; border-radius: 14px; margin-bottom: 1.5rem; border: 1px solid var(--steel-border);">
+        <img src="${article.image}" style="width: 100%; height: 280px; object-fit: cover; border-radius: 14px; margin-bottom: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.15);">
 
-        <div class="blog-article-content" style="color: #334155; line-height: 1.7; font-size: 0.98rem; margin-bottom: 2rem;">
+        <div class="blog-article-content" style="color: #cbd5e1; line-height: 1.7; font-size: 0.98rem; margin-bottom: 2rem;">
           ${article.content}
         </div>
 
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
           <div>
-            <h4 style="font-size: 1rem; color: #0f172a; margin-bottom: 0.2rem;">Need Expert Layout & Fabrication Advice?</h4>
-            <p style="font-size: 0.85rem; color: #64748b;">Speak with BKS Industries engineers for a custom layout quote in Bengaluru.</p>
+            <h4 style="font-size: 1rem; color: #ffffff; margin-bottom: 0.2rem;">Need Expert Layout & Fabrication Advice?</h4>
+            <p style="font-size: 0.85rem; color: #94a3b8;">Speak with BKS Industries engineers for a custom layout quote in Bengaluru.</p>
           </div>
           <button class="btn btn-primary" onclick="sendArticleInquiryWhatsApp('${article.title}')">
             <i class="fa-brands fa-whatsapp"></i> Chat with Kitchen Engineer
@@ -1414,9 +1414,9 @@ function updateCartUI() {
 
   if (quoteCart.length === 0) {
     drawerList.innerHTML = `
-      <div style="text-align: center; padding: 3rem 1rem; color: #64748b;">
-        <i class="fa-solid fa-clipboard-list" style="font-size: 3rem; color: #cbd5e1; margin-bottom: 1rem;"></i>
-        <p style="font-weight: 700; font-size: 1.05rem; color: var(--bg-dark);">Your Quote List is empty</p>
+      <div style="text-align: center; padding: 3rem 1rem; color: #94a3b8;">
+        <i class="fa-solid fa-clipboard-list" style="font-size: 3rem; color: rgba(255,255,255,0.2); margin-bottom: 1rem;"></i>
+        <p style="font-weight: 700; font-size: 1.05rem; color: #ffffff;">Your Quote List is empty</p>
         <p style="font-size: 0.85rem; margin-top: 0.4rem;">Explore commercial equipment and click "Add" to generate a formal quote PDF or WhatsApp inquiry.</p>
       </div>
     `;
@@ -1837,10 +1837,10 @@ function renderPlannerPalette() {
     <div class="planner-palette-item" onclick="addEquipmentToPlanner('${item.id}')" title="Click to add ${item.name} to layout canvas">
       <img src="${item.image}" alt="${item.name}">
       <div>
-        <div style="font-weight: 700; font-size: 0.82rem; color: #0f172a;">${item.name}</div>
-        <div style="font-size: 0.72rem; color: #64748b;">${item.dimensions} • ${item.priceEstimate}</div>
+        <div style="font-weight: 700; font-size: 0.82rem; color: #ffffff;">${item.name}</div>
+        <div style="font-size: 0.72rem; color: #94a3b8;">${item.dimensions} • ${item.priceEstimate}</div>
       </div>
-      <i class="fa-solid fa-plus-circle" style="color: var(--primary); margin-left: auto; font-size: 1.1rem;"></i>
+      <i class="fa-solid fa-plus-circle" style="color: var(--accent); margin-left: auto; font-size: 1.1rem;"></i>
     </div>
   `).join('');
 }
