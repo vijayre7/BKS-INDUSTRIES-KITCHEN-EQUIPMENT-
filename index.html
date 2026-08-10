@@ -22,9 +22,9 @@
           <i class="fa-solid fa-fire"></i>
           <span>Bangalore's #1 Commercial Kitchen Manufacturer & SS Fabricator</span>
         </div>
-        <div class="top-bar-item">
-          <i class="fa-solid fa-location-dot"></i>
-          <span>Lashmidevinagar, Bengaluru 560096</span>
+        <div class="top-bar-item desktop-only">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:Bks-industries@outlook.com" style="color: #94a3b8;">Bks-industries@outlook.com</a>
         </div>
       </div>
       <div class="top-bar-info">
@@ -52,8 +52,11 @@
 
       <ul class="nav-links">
         <li><a href="#hero" class="nav-link active">Home</a></li>
-        <li><a href="#catalog" class="nav-link">Equipment Catalog</a></li>
-        <li><a href="#configurator" class="nav-link">Kitchen Configurator</a></li>
+        <li><a href="#catalog" class="nav-link">Full Catalog</a></li>
+        <li><a href="#planner" class="nav-link"><span class="badge-new-pill">2D</span> Layout Planner</a></li>
+        <li><a href="#configurator" class="nav-link">Cost Estimator</a></li>
+        <li><a href="#calculators" class="nav-link">Utilities Calc</a></li>
+        <li><a href="#blogs" class="nav-link">Blog & Guides</a></li>
         <li><a href="#gallery" class="nav-link">Gallery</a></li>
         <li><a href="#reviews" class="nav-link">Reviews</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -67,12 +70,40 @@
         <a href="tel:+918123939433" class="btn btn-primary">
           <i class="fa-solid fa-headset"></i> Call +91 81239 39433
         </a>
-        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+        <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-header">
+      <div style="display: flex; align-items: center; gap: 0.6rem;">
+        <img src="images/logo.jpg" style="height: 36px; border-radius: 6px;">
+        <span style="font-weight: 800; color: #ffffff; font-size: 1.1rem;">BKS INDUSTRIES</span>
+      </div>
+      <button id="closeMobileNavBtn" style="background: none; border: none; color: #ffffff; font-size: 1.5rem; cursor: pointer;">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#hero" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="#catalog" class="mobile-nav-link"><i class="fa-solid fa-boxes-stacked"></i> Official 60+ Equipment Catalog</a></li>
+      <li><a href="#planner" class="mobile-nav-link"><i class="fa-solid fa-cubes-stacked"></i> 2D Kitchen Layout Planner</a></li>
+      <li><a href="#configurator" class="mobile-nav-link"><i class="fa-solid fa-sliders"></i> Turnkey Cost Estimator</a></li>
+      <li><a href="#calculators" class="mobile-nav-link"><i class="fa-solid fa-calculator"></i> Exhaust & Gas Calculators</a></li>
+      <li><a href="#blogs" class="mobile-nav-link"><i class="fa-solid fa-newspaper"></i> Commercial Kitchen Blog</a></li>
+      <li><a href="#gallery" class="mobile-nav-link"><i class="fa-solid fa-images"></i> Manufacturing Gallery</a></li>
+      <li><a href="#reviews" class="mobile-nav-link"><i class="fa-solid fa-star"></i> Verified Google Reviews</a></li>
+      <li><a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Factory Contact & Map</a></li>
+    </ul>
+    <div style="padding: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: auto;">
+      <a href="tel:+918123939433" class="btn btn-primary" style="width: 100%; text-align: center;">
+        <i class="fa-solid fa-phone"></i> Call +91 81239 39433
+      </a>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section id="hero" class="hero-section">
@@ -80,25 +111,29 @@
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-badge-pill">
-          <i class="fa-solid fa-shield-halved"></i> 100% SS 304 Food-Grade Certified • Factory Direct
+          <i class="fa-solid fa-shield-halved"></i> 100% SS 304 Food-Grade Certified • Factory Direct Bengaluru
         </div>
         <h1 class="hero-title">
           Engineering High-Performance <span>Commercial Kitchens</span> in Bangalore
         </h1>
         <p class="hero-description">
-          Premier manufacturer of custom stainless steel equipment, industrial gas ranges, Bain Marie warmers, exhaust hood ventilation, and complete turnkey kitchen setups for hotels, restaurants, and cloud kitchens.
+          Premier manufacturer of custom stainless steel equipment, industrial gas ranges, Bain Marie warmers, exhaust hood ventilation systems, and complete turnkey kitchen setups for hotels, restaurants, and cloud kitchens.
         </p>
         
         <div class="hero-ctas">
-          <a href="#configurator" class="btn btn-primary" style="padding: 0.9rem 1.8rem; font-size: 1.05rem;">
-            <i class="fa-solid fa-sliders"></i> Build Custom Kitchen Quote
+          <a href="#catalog" class="btn btn-primary" style="padding: 0.9rem 1.8rem; font-size: 1.05rem;">
+            <i class="fa-solid fa-boxes-stacked"></i> Browse 60+ Official Catalog Items
           </a>
-          <a href="#catalog" class="btn btn-outline" style="color: #ffffff; border-color: rgba(255,255,255,0.3); padding: 0.9rem 1.8rem; font-size: 1.05rem;">
-            <i class="fa-solid fa-boxes-stacked"></i> Explore Equipment
+          <a href="#planner" class="btn btn-outline" style="color: #ffffff; border-color: rgba(255,255,255,0.3); padding: 0.9rem 1.8rem; font-size: 1.05rem;">
+            <i class="fa-solid fa-cubes-stacked"></i> Open 2D Floor Plan Planner
           </a>
         </div>
 
         <div class="hero-stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">60+</span>
+            <span class="stat-label">Catalog Products</span>
+          </div>
           <div class="stat-item">
             <span class="stat-number">500+</span>
             <span class="stat-label">Kitchens Built</span>
@@ -106,10 +141,6 @@
           <div class="stat-item">
             <span class="stat-number">15+ Yrs</span>
             <span class="stat-label">Fabrication Mastery</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">24/7</span>
-            <span class="stat-label">Service Support</span>
           </div>
           <div class="stat-item">
             <span class="stat-number">5.0 ★</span>
@@ -151,38 +182,114 @@
   <!-- Interactive Equipment Catalog Section -->
   <section id="catalog" class="section">
     <div class="section-header">
-      <span class="section-subtitle">Catalog & Specifications</span>
-      <h2 class="section-title">Commercial Kitchen Equipment</h2>
-      <p class="section-desc">Heavy-duty food service equipment manufactured with precision stainless steel fabrication in Bangalore.</p>
+      <span class="section-subtitle">Official BKS Industries Catalog</span>
+      <h2 class="section-title">Commercial Kitchen Equipment & SS Fabrication</h2>
+      <p class="section-desc">Explore our complete lineup of 60+ heavy-duty food service machines, cooking ranges, steam cabinets, and custom stainless steel work.</p>
     </div>
 
     <div class="catalog-controls">
       <div class="search-box">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="catalogSearch" placeholder="Search equipment (e.g. Burner, Bain Marie, Sink)...">
+        <input type="text" id="catalogSearch" placeholder="Search 60+ items (e.g. Idly Box, Roomali Roti, Shawarma, Bain Marie, Pot Rack)...">
       </div>
 
       <div class="category-tabs">
-        <button class="category-tab active" data-category="all">All Equipment</button>
-        <button class="category-tab" data-category="cooking">Cooking Ranges</button>
-        <button class="category-tab" data-category="ss_fabrication">SS Fabrication</button>
+        <button class="category-tab active" data-category="all">All (60+ Items)</button>
+        <button class="category-tab" data-category="cooking">Cooking & Burners</button>
+        <button class="category-tab" data-category="dosa_steamers">Dosa & Steamers</button>
         <button class="category-tab" data-category="warming">Warming & Display</button>
-        <button class="category-tab" data-category="exhaust">Exhaust & Ducting</button>
-        <button class="category-tab" data-category="storage">Storage & Trolleys</button>
+        <button class="category-tab" data-category="shawarma_grills">Shawarma & Grills</button>
+        <button class="category-tab" data-category="refrigeration">Refrigeration</button>
+        <button class="category-tab" data-category="ss_fabrication">SS Tables & Sinks</button>
+        <button class="category-tab" data-category="storage_trolleys">Storage & Trolleys</button>
       </div>
     </div>
 
     <div class="catalog-grid" id="catalogGrid">
-      <!-- Populated dynamically via JS -->
+      <!-- Populated dynamically via app.js -->
     </div>
   </section>
 
-  <!-- Interactive Kitchen Configurator -->
+  <!-- Interactive 2D Visual Kitchen Layout Planner -->
+  <section id="planner" class="section planner-section" style="background: var(--bg-dark); color: #ffffff;">
+    <div class="section-header" style="color: #ffffff;">
+      <span class="section-subtitle" style="color: var(--accent);">Visual Blueprint Designer</span>
+      <h2 class="section-title" style="color: #ffffff;">Interactive 2D Kitchen Layout Planner</h2>
+      <p class="section-desc" style="color: #94a3b8;">Arrange equipment on a custom floor plan grid to estimate exhaust CFM ventilation, power load, and turnkey budget live.</p>
+    </div>
+
+    <div class="planner-wrapper">
+      <!-- Control Bar & Presets -->
+      <div class="planner-control-bar">
+        <div class="planner-presets-wrap">
+          <span style="font-size: 0.85rem; font-weight: 700; color: #cbd5e1;">Load Preset Blueprint:</span>
+          <button class="preset-btn active" data-preset="cloud_kitchen">Cloud Kitchen (300 sq.ft)</button>
+          <button class="preset-btn" data-preset="restaurant">Restaurant (800 sq.ft)</button>
+          <button class="preset-btn" data-preset="banquet">Hotel Banquet (1500 sq.ft)</button>
+        </div>
+
+        <div class="planner-dimensions-inputs">
+          <label>Room Width (ft): <input type="number" id="plannerWidthInput" value="24" min="10" max="60"></label>
+          <label>Room Length (ft): <input type="number" id="plannerLengthInput" value="18" min="10" max="60"></label>
+        </div>
+      </div>
+
+      <!-- Main Planner Grid & Palette Layout -->
+      <div class="planner-main-grid">
+        <!-- Palette Sidebar -->
+        <div class="planner-palette-sidebar">
+          <div class="palette-title"><i class="fa-solid fa-list-check"></i> Equipment Palette</div>
+          <p style="font-size: 0.78rem; color: #94a3b8; margin-bottom: 0.8rem;">Click any item to place on floor plan grid:</p>
+          <div class="planner-palette-list" id="plannerPaletteList">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- 2D Canvas Grid Area -->
+        <div class="planner-canvas-container">
+          <div class="planner-canvas-grid" id="plannerCanvasGrid">
+            <!-- Dynamic 2D Nodes Rendered via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Analytics Bar -->
+      <div class="planner-analytics-bar">
+        <div class="analytic-item">
+          <div class="analytic-label">Placed Equipment</div>
+          <div class="analytic-val" id="planStatCount">0 Units</div>
+        </div>
+        <div class="analytic-item">
+          <div class="analytic-label">Required Ventilation</div>
+          <div class="analytic-val" id="planStatCFM" style="color: #38bdf8;">0 CFM</div>
+        </div>
+        <div class="analytic-item">
+          <div class="analytic-label">Power & Gas Load</div>
+          <div class="analytic-val" id="planStatPower" style="color: #f59e0b;">0 kW / 0 Gas</div>
+        </div>
+        <div class="analytic-item">
+          <div class="analytic-label">Turnkey Equipment Total</div>
+          <div class="analytic-val" id="planStatCost" style="color: #10b981;">₹0</div>
+        </div>
+
+        <div style="display: flex; gap: 0.8rem; margin-left: auto;">
+          <button class="btn btn-outline" onclick="clearPlannerGrid()" style="color: #ef4444; border-color: rgba(239,68,68,0.4);">
+            <i class="fa-solid fa-trash-can"></i> Clear Grid
+          </button>
+          <button class="btn btn-primary" onclick="exportPlannerLayoutWhatsApp()">
+            <i class="fa-brands fa-whatsapp"></i> Dispatch Layout Inquiry
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Turnkey Cost Estimator -->
   <section id="configurator" class="section configurator-section">
     <div class="section-header">
-      <span class="section-subtitle">Interactive Quote Tool</span>
-      <h2 class="section-title">Kitchen Cost Estimator & Configurator</h2>
-      <p class="section-desc">Select your kitchen space and required modules for an instant equipment cost estimate.</p>
+      <span class="section-subtitle">Quick Estimator</span>
+      <h2 class="section-title">Turnkey Kitchen Cost Estimator</h2>
+      <p class="section-desc">Select your kitchen space concept and required modules for an instant equipment estimate.</p>
     </div>
 
     <div class="configurator-card">
@@ -214,14 +321,14 @@
         </div>
         <div class="size-slider-wrap">
           <div class="size-labels">
-            <span>Area Size:</span>
+            <span>Carpet Area:</span>
             <span id="sizeSqFtVal" style="color: var(--primary); font-weight: 800;">400 sq. ft.</span>
           </div>
           <input type="range" id="kitchenSizeSlider" class="range-slider" min="200" max="2000" step="50" value="400">
         </div>
 
         <div class="config-step-title">
-          <span>3</span> Select Required Equipment Modules
+          <span>3</span> Select Required Equipment Packages
         </div>
         <div class="modules-checklist">
           <label class="module-checkbox">
@@ -256,19 +363,117 @@
         </ul>
 
         <div class="summary-total-box">
-          <div class="total-label">Estimated Equipment Cost</div>
+          <div class="total-label">Estimated Turnkey Equipment Budget</div>
           <div class="total-amount" id="configTotalVal">₹1,24,000</div>
         </div>
 
         <button class="btn btn-primary" onclick="sendConfiguratorWhatsApp()" style="width: 100%; padding: 0.9rem; font-size: 1rem;">
-          <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Request Detailed Layout & Quote
+          <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Request Detailed Layout & Site Visit
         </button>
       </div>
     </div>
   </section>
 
+  <!-- Commercial Kitchen Engineering Calculators -->
+  <section id="calculators" class="section" style="background: #ffffff;">
+    <div class="section-header">
+      <span class="section-subtitle">Commercial Engineering Utilities</span>
+      <h2 class="section-title">Kitchen Engineering Calculators</h2>
+      <p class="section-desc">Instant tools to calculate required exhaust airflow (CFM) and monthly commercial LPG cylinder consumption.</p>
+    </div>
+
+    <div class="calculators-grid">
+      <!-- Calculator 1: Exhaust CFM -->
+      <div class="calc-card">
+        <div class="calc-card-header">
+          <i class="fa-solid fa-fan" style="color: var(--primary);"></i>
+          <h3>Exhaust Hood Airflow & Motor Sizing</h3>
+        </div>
+        <form id="cfmCalcForm" class="calc-form">
+          <div class="form-group">
+            <label>Hood Length (Feet):</label>
+            <input type="number" id="cfmLength" class="form-control" value="8" min="3" max="25">
+          </div>
+          <div class="form-group">
+            <label>Hood Depth (Feet):</label>
+            <input type="number" id="cfmDepth" class="form-control" value="3.5" step="0.5" min="2" max="6">
+          </div>
+          <div class="form-group">
+            <label>Cooking Equipment Type:</label>
+            <select id="cfmCookingType" class="form-control">
+              <option value="250">Light Duty (Prep, Steamers, Kettles)</option>
+              <option value="350" selected>Medium Duty (Commercial Burners, Fryers, Tawa)</option>
+              <option value="450">Heavy Duty (Charcoal, High Flame Wok, Tandoor)</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="calc-results-box">
+          <div class="res-row">
+            <span>Required Airflow:</span>
+            <strong id="resCFM" style="color: var(--primary);">2,800 CFM</strong>
+          </div>
+          <div class="res-row">
+            <span>Recommended Duct Size:</span>
+            <strong id="resDuct">18" Round Duct</strong>
+          </div>
+          <div class="res-row">
+            <span>Blower Motor HP:</span>
+            <strong id="resMotorHp" style="color: var(--accent-hover);">2.0 HP (3-Phase)</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculator 2: LPG Gas Consumption -->
+      <div class="calc-card">
+        <div class="calc-card-header">
+          <i class="fa-solid fa-fire-burner" style="color: var(--accent);"></i>
+          <h3>LPG Commercial Gas Estimator</h3>
+        </div>
+        <form id="lpgCalcForm" class="calc-form">
+          <div class="form-group">
+            <label>Number of High Pressure Burners:</label>
+            <input type="number" id="lpgBurners" class="form-control" value="4" min="1" max="20">
+          </div>
+          <div class="form-group">
+            <label>Daily Kitchen Operating Hours:</label>
+            <input type="number" id="lpgHours" class="form-control" value="10" min="1" max="24">
+          </div>
+        </form>
+
+        <div class="calc-results-box">
+          <div class="res-row">
+            <span>Daily Fuel Usage:</span>
+            <strong id="resLpgDaily" style="color: var(--accent-hover);">16.0 kg / day</strong>
+          </div>
+          <div class="res-row">
+            <span>Est. Monthly 19kg Cylinders:</span>
+            <strong id="resLpgCylinders">26 Cylinders</strong>
+          </div>
+          <div class="res-row">
+            <span>Est. Monthly LPG Cost:</span>
+            <strong id="resLpgCost" style="color: var(--success);">₹48,100 / mo</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: Commercial Kitchen Blog & Knowledge Hub -->
+  <section id="blogs" class="section" style="background: var(--steel-light);">
+    <div class="section-header">
+      <span class="section-subtitle">Expert Advice & Guides</span>
+      <h2 class="section-title">Commercial Kitchen Knowledge Hub</h2>
+      <p class="section-desc">Practical technical guides and layout blueprints written by BKS Industries engineering experts in Bangalore.</p>
+    </div>
+
+    <div class="blogs-grid" id="blogsGrid">
+      <!-- Populated dynamically via app.js -->
+    </div>
+  </section>
+
   <!-- Photo Gallery Showcase -->
-  <section id="gallery" class="section">
+  <section id="gallery" class="section" style="background: #ffffff;">
     <div class="section-header">
       <span class="section-subtitle">Manufacturing & Fabrication</span>
       <h2 class="section-title">Actual Project Installation Gallery</h2>
@@ -295,16 +500,40 @@
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/hero.png" alt="Industrial Burner Range">
+        <img src="images/burner_oven.png" alt="Industrial Burner Range">
         <div class="gallery-overlay">
-          <div class="gallery-title">High Pressure Industrial Burners</div>
+          <div class="gallery-title">High Pressure Cooking Ranges</div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/exhaust_hood.png" alt="Exhaust Hood Ventilation">
+        <div class="gallery-overlay">
+          <div class="gallery-title">Commercial Hood & Ducting</div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/dosa_tawa.png" alt="Dosa Hot Plate Range">
+        <div class="gallery-overlay">
+          <div class="gallery-title">Dosa Tawa Hot Plate Unit</div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/deep_fryer.png" alt="Commercial Deep Fryer">
+        <div class="gallery-overlay">
+          <div class="gallery-title">Double Tank Electric Fryer</div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/baking_oven.png" alt="Deck Baking Oven">
+        <div class="gallery-overlay">
+          <div class="gallery-title">Pizza & Bakery Deck Oven</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Customer Reviews -->
-  <section id="reviews" class="section" style="background: #ffffff;">
+  <section id="reviews" class="section" style="background: var(--steel-light);">
     <div class="section-header">
       <span class="section-subtitle">Verified Customer Feedback</span>
       <h2 class="section-title">What Kitchen Owners Say About Us</h2>
@@ -357,7 +586,7 @@
   </section>
 
   <!-- Contact & Map Section -->
-  <section id="contact" class="section" style="background: var(--steel-light);">
+  <section id="contact" class="section" style="background: #ffffff;">
     <div class="section-header">
       <span class="section-subtitle">Get In Touch</span>
       <h2 class="section-title">Visit Our Manufacturing Unit or Contact Us</h2>
@@ -367,8 +596,8 @@
     <div class="contact-container">
       <div class="contact-info-card">
         <div>
-          <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">BKS Industries</h3>
-          <p style="color: #94a3b8; font-size: 0.95rem;">Commercial Kitchen Equipment Manufacturer & SS Fabricators</p>
+          <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">B.K.S. INDUSTRIES</h3>
+          <p style="color: #94a3b8; font-size: 0.95rem;">Manufacturers of Kitchen Equipments, Railings & General Fabrications</p>
         </div>
 
         <div class="info-item">
@@ -380,25 +609,26 @@
         </div>
 
         <div class="info-item">
-          <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
           <div class="info-details">
-            <h4>Factory & Office Address</h4>
-            <p>Site No. 22, 1st Cross, 1st Main, Kempamma Layout, Lakshmidevinagar, Bengaluru 560096</p>
+            <h4>Official Contact Emails</h4>
+            <p><a href="mailto:Bks-industries@outlook.com" style="color: #cbd5e1;">Bks-industries@outlook.com</a></p>
+            <p><a href="mailto:Bksindustries23@gmail.com" style="color: #cbd5e1;">Bksindustries23@gmail.com</a></p>
           </div>
         </div>
 
         <div class="info-item">
-          <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+          <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
           <div class="info-details">
-            <h4>Working Hours</h4>
-            <p>Monday - Saturday: <strong>Open 24 Hours</strong></p>
-            <p>Sunday: <strong>Closed</strong></p>
+            <h4>Factory & Office Address</h4>
+            <p>Site No. 22, 1st Cross, 1st Main, Kempamma Layout, Lakshmidevinagar, Bengaluru 560096</p>
+            <p style="font-size: 0.85rem; color: var(--primary); margin-top: 0.2rem;">Web: www.bkskitchenequipment.com</p>
           </div>
         </div>
 
-        <!-- Google Map Embed -->
-        <div style="border-radius: 14px; overflow: hidden; height: 200px; margin-top: 1rem; border: 1px solid rgba(255,255,255,0.15);">
-          <iframe title="BKS Industries Map Location" width="100%" height="100%" loading="lazy" style="border:0;" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJc_ecJwU9rjsRSk0Of21s20M&key=AIzaSyDTRDHiagv2ileOp-W-YRJTwa8359jTSTs"></iframe>
+        <!-- Map Container -->
+        <div style="border-radius: 14px; overflow: hidden; height: 180px; margin-top: 0.5rem; border: 1px solid rgba(255,255,255,0.15);">
+          <iframe title="BKS Industries Map Location" width="100%" height="100%" loading="lazy" style="border:0;" src="https://maps.google.com/maps?q=BKS+Industries+Lakshmidevinagar+Bengaluru&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
         </div>
       </div>
 
@@ -444,8 +674,8 @@
         <a href="#" class="brand-logo" style="color: #ffffff;">
           <img src="images/logo.jpg" alt="BKSI Logo" class="brand-logo-img">
           <div>
-            <div class="brand-text-name" style="color: #ffffff;">BKS INDUSTRIES</div>
-            <div class="brand-text-sub" style="color: #94a3b8;">Commercial Kitchen Equipments</div>
+            <div class="brand-text-name" style="color: #ffffff;">B.K.S. INDUSTRIES</div>
+            <div class="brand-text-sub" style="color: #94a3b8;">Kitchen Equipments & SS Fabrication</div>
           </div>
         </a>
         <p>
@@ -454,23 +684,25 @@
       </div>
 
       <div class="footer-col">
-        <h4>Equipment</h4>
+        <h4>Equipment Categories</h4>
         <ul class="footer-links">
-          <li><a href="#catalog">Industrial Cooking Ranges</a></li>
-          <li><a href="#catalog">SS Work Tables & Sinks</a></li>
-          <li><a href="#catalog">Bain Marie Food Warmers</a></li>
-          <li><a href="#catalog">Exhaust Hood Systems</a></li>
-          <li><a href="#catalog">SS Storage Racks & Trolleys</a></li>
+          <li><a href="#catalog">Cooking Ranges & Burners</a></li>
+          <li><a href="#catalog">Dosa Plates & Steamers</a></li>
+          <li><a href="#catalog">Shawarma & Chicken Grills</a></li>
+          <li><a href="#catalog">Bain Marie & Hot Display</a></li>
+          <li><a href="#catalog">Commercial Refrigeration</a></li>
+          <li><a href="#catalog">SS Tables & Sink Units</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Solutions</h4>
+        <h4>Interactive Tools & Guides</h4>
         <ul class="footer-links">
-          <li><a href="#configurator">Cloud Kitchen Setup</a></li>
-          <li><a href="#configurator">Hotel Kitchen Planning</a></li>
-          <li><a href="#configurator">Restaurant Kitchen Equipment</a></li>
-          <li><a href="#configurator">Custom SS Fabrication</a></li>
+          <li><a href="#blogs">Commercial Kitchen Guides</a></li>
+          <li><a href="#planner">2D Kitchen Layout Planner</a></li>
+          <li><a href="#configurator">Turnkey Cost Estimator</a></li>
+          <li><a href="#calculators">Exhaust CFM Calculator</a></li>
+          <li><a href="#calculators">LPG Gas Estimator</a></li>
         </ul>
       </div>
 
@@ -478,14 +710,15 @@
         <h4>Contact Info</h4>
         <ul class="footer-links">
           <li><i class="fa-solid fa-phone" style="color: var(--accent);"></i> +91 81239 39433</li>
+          <li><i class="fa-solid fa-envelope" style="color: var(--accent);"></i> Bks-industries@outlook.com</li>
+          <li><i class="fa-solid fa-globe" style="color: var(--accent);"></i> www.bkskitchenequipment.com</li>
           <li><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> Lakshmidevinagar, Bengaluru</li>
-          <li><i class="fa-solid fa-clock" style="color: var(--accent);"></i> Mon-Sat: Open 24 Hours</li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <div>© 2026 BKS Industries. All Rights Reserved. Commercial Kitchen Manufacturer in Bangalore.</div>
+      <div>© 2026 B.K.S. Industries. All Rights Reserved. Commercial Kitchen Manufacturer in Bangalore.</div>
       <div>Designed with Precision & Performance</div>
     </div>
   </footer>
@@ -502,17 +735,22 @@
     </div>
     
     <div class="drawer-body" id="drawerItemList">
-      <!-- Items dynamically rendered -->
+      <!-- Items dynamically rendered via JS -->
     </div>
 
     <div class="drawer-footer">
-      <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem; margin-bottom: 1rem; color: var(--bg-dark);">
+      <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--bg-dark);">
         <span>Estimated Total:</span>
         <span id="drawerSubtotal" style="color: var(--accent-hover);">₹0</span>
       </div>
-      <button class="btn btn-primary" onclick="sendQuoteWhatsApp()" style="width: 100%; padding: 0.9rem;">
-        <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Send Quote Request via WhatsApp
-      </button>
+      <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+        <button class="btn btn-primary" onclick="sendQuoteWhatsApp()" style="width: 100%; padding: 0.8rem;">
+          <i class="fa-brands fa-whatsapp" style="font-size: 1.1rem;"></i> Send Quote Request via WhatsApp
+        </button>
+        <button class="btn btn-dark" onclick="downloadQuotePDF()" style="width: 100%; padding: 0.8rem;">
+          <i class="fa-solid fa-file-pdf" style="font-size: 1.1rem; color: #38bdf8;"></i> Print / Download Formal PDF Quote
+        </button>
+      </div>
     </div>
   </div>
 
@@ -525,6 +763,9 @@
       <i class="fa-solid fa-phone"></i>
     </a>
   </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container"></div>
 
   <!-- JS App Logic -->
   <script src="app.js"></script>

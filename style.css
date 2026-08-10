@@ -74,6 +74,17 @@ button {
   font-family: inherit;
 }
 
+.badge-new-pill {
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.1rem 0.4rem;
+  border-radius: 99px;
+  margin-right: 0.2rem;
+  vertical-align: middle;
+}
+
 /* Announcement Bar */
 .top-bar {
   background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
@@ -164,20 +175,6 @@ button {
   transform: scale(1.05);
 }
 
-.brand-icon-box {
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-secondary) 100%);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent);
-  font-size: 1.4rem;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(245, 158, 11, 0.2);
-}
-
 .brand-text-name {
   font-family: 'Outfit', sans-serif;
   font-weight: 900;
@@ -197,13 +194,13 @@ button {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   list-style: none;
 }
 
 .nav-link {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--text-dark);
   transition: var(--transition);
   position: relative;
@@ -228,7 +225,7 @@ button {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 /* Button Styles */
@@ -317,6 +314,74 @@ button {
   font-size: 1.4rem;
   background: none;
   color: var(--bg-dark);
+  padding: 0.4rem;
+}
+
+/* Mobile Nav Drawer */
+.mobile-nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 250;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.mobile-nav-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 300px;
+  height: 100vh;
+  background: var(--bg-dark);
+  color: #ffffff;
+  z-index: 251;
+  box-shadow: 10px 0 30px rgba(0,0,0,0.3);
+  transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-drawer.active {
+  left: 0;
+}
+
+.mobile-nav-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.5rem;
+  color: #cbd5e1;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.mobile-nav-link:hover {
+  background: rgba(255,255,255,0.08);
+  color: var(--accent);
 }
 
 /* Hero Section */
@@ -643,9 +708,9 @@ button {
 }
 
 .card-title {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: var(--bg-dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .card-specs-list {
@@ -697,7 +762,517 @@ button {
   color: var(--accent-hover);
 }
 
-/* Interactive Kitchen Configurator */
+/* ------------------------------------------------------------- */
+/* Commercial Kitchen Blog & Knowledge Hub Styles */
+/* ------------------------------------------------------------- */
+.blogs-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.blog-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--steel-border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.blog-image-wrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image-wrap img {
+  transform: scale(1.05);
+}
+
+.blog-category-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.blog-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.78rem;
+  color: var(--steel);
+  margin-bottom: 0.6rem;
+}
+
+.blog-title {
+  font-size: 1.15rem;
+  color: var(--bg-dark);
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
+}
+
+.blog-summary {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-article-content h3 {
+  font-size: 1.3rem;
+  color: #0f172a;
+  margin: 1.2rem 0 0.6rem;
+}
+
+.blog-article-content h4 {
+  font-size: 1.05rem;
+  color: #0f172a;
+  margin: 1rem 0 0.4rem;
+}
+
+.blog-article-content ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-article-content li {
+  margin-bottom: 0.4rem;
+}
+
+/* ------------------------------------------------------------- */
+/* Interactive 2D Visual Kitchen Layout Planner Styles */
+/* ------------------------------------------------------------- */
+.planner-section {
+  padding: 5rem 1.5rem;
+}
+
+.planner-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.planner-control-bar {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.planner-presets-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.preset-btn {
+  background: rgba(255,255,255,0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.preset-btn:hover {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: var(--accent);
+}
+
+.preset-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.planner-dimensions-inputs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.planner-dimensions-inputs input {
+  width: 65px;
+  background: #0f172a;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #ffffff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.planner-main-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 1.5rem;
+  min-height: 520px;
+}
+
+.planner-palette-sidebar {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.palette-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.planner-palette-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  overflow-y: auto;
+  max-height: 440px;
+  padding-right: 0.3rem;
+}
+
+.planner-palette-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.planner-palette-item:hover {
+  background: rgba(2, 132, 199, 0.15);
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+.planner-palette-item img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.planner-canvas-container {
+  background: #020617;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  position: relative;
+  overflow: auto;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.8);
+}
+
+.planner-canvas-grid {
+  display: grid;
+  gap: 6px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 0);
+  background-size: 20px 20px;
+  min-height: 450px;
+  position: relative;
+  border: 2px dashed rgba(2, 132, 199, 0.4);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.planner-grid-dimensions-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.planner-placed-node {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.85) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  border-radius: 8px;
+  padding: 0.6rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+.planner-placed-node:hover {
+  border-color: var(--accent);
+  transform: scale(1.02);
+  z-index: 5;
+}
+
+.placed-node-cat {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.placed-node-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.placed-node-delete {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: rgba(239, 68, 68, 0.8);
+  color: #ffffff;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border: none;
+}
+
+.planner-analytics-bar {
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.analytic-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.analytic-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.analytic-val {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+/* ------------------------------------------------------------- */
+/* Commercial Kitchen Calculators Section Styles */
+/* ------------------------------------------------------------- */
+.calculators-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.calc-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--steel-border);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.calc-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--steel-border);
+}
+
+.calc-card-header i {
+  font-size: 1.5rem;
+}
+
+.calc-form {
+  margin-bottom: 1.5rem;
+}
+
+.calc-results-box {
+  background: var(--steel-light);
+  border: 1px solid var(--steel-border);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.res-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.92rem;
+  color: var(--text-dark);
+}
+
+/* ------------------------------------------------------------- */
+/* Interactive Spec Customizer Modal Styles */
+/* ------------------------------------------------------------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(6px);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-card {
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 720px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: #f1f5f9;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--bg-dark);
+  transition: var(--transition);
+}
+
+.modal-close-btn:hover {
+  background: #e2e8f0;
+}
+
+.badge-tag {
+  background: #e0f2fe;
+  color: #0284c7;
+  padding: 0.25rem 0.6rem;
+  border-radius: 99px;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  pointer-events: none;
+}
+
+.toast-message {
+  background: var(--bg-dark);
+  color: #ffffff;
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--accent);
+  box-shadow: var(--shadow-lg);
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.toast-message.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Configurator Card */
 .configurator-section {
   background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);
   position: relative;
@@ -880,7 +1455,7 @@ button {
   color: var(--accent);
 }
 
-/* Reviews Carousel */
+/* Reviews Grid */
 .reviews-grid {
   max-width: 1280px;
   margin: 0 auto;
@@ -1218,9 +1793,14 @@ footer {
   background: var(--primary);
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
-  .hero-container, .contact-container, .configurator-card {
+  .hero-container, .contact-container, .configurator-card, .planner-main-grid, .calculators-grid {
     grid-template-columns: 1fr;
   }
   .hero-title {
@@ -1232,6 +1812,9 @@ footer {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .modal-grid-wrap {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1240,6 +1823,9 @@ footer {
   }
   .mobile-menu-btn {
     display: block;
+  }
+  .desktop-only {
+    display: none;
   }
   .hero-stats-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1253,5 +1839,9 @@ footer {
   }
   .footer-container {
     grid-template-columns: 1fr 1fr;
+  }
+  .planner-analytics-bar {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
