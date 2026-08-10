@@ -1104,6 +1104,18 @@ function showToast(message, type = 'success') {
 
 // Global Event Listeners
 function setupEventListeners() {
+  // Scroll listener for header glass effect elevation
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('navbar-scrolled');
+      } else {
+        navbar.classList.remove('navbar-scrolled');
+      }
+    });
+  }
+
   // Mobile Nav Drawer Toggle
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const mobileNavDrawer = document.getElementById('mobileNavDrawer');
