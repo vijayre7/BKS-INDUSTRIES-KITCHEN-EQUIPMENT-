@@ -268,6 +268,7 @@ button {
   padding: 0.42rem 0.85rem;
   font-size: 0.8rem;
   border-radius: var(--radius-full);
+  white-space: nowrap;
 }
 
 /* Button Styles */
@@ -281,6 +282,7 @@ button {
   justify-content: center;
   gap: 0.5rem;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .btn-primary {
