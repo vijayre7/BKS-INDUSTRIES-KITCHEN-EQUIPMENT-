@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const PUBLIC_DIR = __dirname;
 
 const MIME_TYPES = {
@@ -16,8 +16,8 @@ const MIME_TYPES = {
   '.ico': 'image/x-icon'
 };
 
-const server = http.createServer((req, res) => {
-  let filePath = path.join(PUBLIC_DIR, req.url === '/' ? 'index.html' : req.url);
+const handleRequest = (req, res) => {
+  let filePath = path.join(PUBLIC_DIR, req.url === '/' ? 'index.html' : req.url.split('?')[0]);
   const ext = path.extname(filePath).toLowerCase();
   const contentType = MIME_TYPES[ext] || 'application/octet-stream';
 
@@ -35,8 +35,13 @@ const server = http.createServer((req, res) => {
       res.end(content, 'utf-8');
     }
   });
-});
+};
 
-server.listen(PORT, () => {
-  console.log(`BKS Industries website server running at http://localhost:${PORT}/`);
-});
+if (require.main === module) {
+  const server = http.createServer(handleRequest);
+  server.listen(PORT, () => {
+    console.log(`BKS Industries website server running at http://localhost:${PORT}/`);
+  });
+}
+
+module.exports = handleRequest;
