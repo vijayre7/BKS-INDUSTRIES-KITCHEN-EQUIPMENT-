@@ -1885,6 +1885,40 @@ function sendQuoteWhatsApp() {
   window.open(url, '_blank');
 }
 
+// Send Quote via Email
+function sendQuoteEmail() {
+  if (quoteCart.length === 0) {
+    alert('Please add at least one equipment item to your quote list first!');
+    return;
+  }
+
+  let totalEst = 0;
+  let body = `New Commercial Kitchen Equipment Quote Request\n`;
+  body += `===============================================\n\n`;
+  body += `Selected Equipment List:\n`;
+
+  quoteCart.forEach((item, idx) => {
+    const itemTotal = item.priceValue * item.qty;
+    totalEst += itemTotal;
+    body += `${idx + 1}. ${item.name} x ${item.qty} - ₹${itemTotal.toLocaleString('en-IN')}\n`;
+    if (item.notes) body += `   (Specs: ${item.notes})\n`;
+  });
+
+  body += `\nEstimated Equipment Total: ₹${totalEst.toLocaleString('en-IN')}\n\n`;
+  body += `Please provide your formal price quotation, tax invoice details, and delivery timeline for Bengaluru setup.\n\n`;
+  body += `-----------------------------------------------\n`;
+  body += `Dispatched via BKS Industries Official Website (www.bkskitchenequipment.com)`;
+
+  const recipient = 'Bks-industries@outlook.com';
+  const ccRecipient = 'Bksindustries23@gmail.com';
+  const subject = `Equipment Quote Request - BKS Industries (${quoteCart.length} Items)`;
+
+  const mailtoUrl = `mailto:${recipient}?cc=${ccRecipient}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailtoUrl;
+
+  showToast('Opening your email composer to send quote request to Bks-industries@outlook.com');
+}
+
 // Printable PDF Formal Quote Sheet Generator
 function downloadQuotePDF() {
   if (quoteCart.length === 0) {
@@ -2403,24 +2437,53 @@ function calculateLPG() {
   if (resCost) resCost.innerText = `₹${approxMonthlyCost.toLocaleString('en-IN')} / mo`;
 }
 
-// Contact Form Handler
+// Contact Form Handler - Direct Email Dispatch to BKS Industries
 function handleContactSubmit(e) {
   e.preventDefault();
   const name = document.getElementById('contactName').value;
+  const emailInput = document.getElementById('contactEmail') ? document.getElementById('contactEmail').value : '';
   const phoneInput = document.getElementById('contactPhone').value;
   const kType = document.getElementById('contactKitchenType').value;
   const msg = document.getElementById('contactMsg').value;
 
+  const recipient = 'Bks-industries@outlook.com';
+  const ccRecipient = 'Bksindustries23@gmail.com';
+  const subject = `New Instant Kitchen Inquiry from ${name} (${kType})`;
+  
+  let body = `Instant Commercial Kitchen Equipment Inquiry\n`;
+  body += `===============================================\n\n`;
+  body += `Client Name: ${name}\n`;
+  if (emailInput) body += `Client Email: ${emailInput}\n`;
+  body += `Phone / WhatsApp: ${phoneInput}\n`;
+  body += `Business / Kitchen Type: ${kType}\n\n`;
+  body += `Equipment Requirements & Project Notes:\n${msg || 'No additional notes provided.'}\n\n`;
+  body += `-----------------------------------------------\n`;
+  body += `Dispatched via BKS Industries Official Website (www.bkskitchenequipment.com)`;
+
+  const mailtoUrl = `mailto:${recipient}?cc=${ccRecipient}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailtoUrl;
+
+  showToast('Opening email client to send your instant inquiry to Bks-industries@outlook.com');
+  document.getElementById('contactForm').reset();
+}
+
+// Optional WhatsApp Dispatch Handler for Contact Form
+function sendContactWhatsApp() {
+  const name = document.getElementById('contactName').value || 'Client';
+  const emailInput = document.getElementById('contactEmail') ? document.getElementById('contactEmail').value : '';
+  const phoneInput = document.getElementById('contactPhone').value || '';
+  const kType = document.getElementById('contactKitchenType').value;
+  const msg = document.getElementById('contactMsg').value || '';
+
   let text = `*New Direct Inquiry - BKS Industries Website*\n\n`;
   text += `*Name:* ${name}\n`;
+  if (emailInput) text += `*Email:* ${emailInput}\n`;
   text += `*Phone:* ${phoneInput}\n`;
   text += `*Kitchen Type:* ${kType}\n`;
-  text += `*Requirements / Details:* ${msg}\n`;
+  text += `*Requirements:* ${msg}\n`;
 
   const phone = '918123939433';
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
   window.open(url, '_blank');
-
-  showToast('Thank you! Your inquiry details have been formatted for instant WhatsApp dispatch.');
-  document.getElementById('contactForm').reset();
 }

@@ -734,12 +734,16 @@
 
       <div class="contact-form-card">
         <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 0.5rem;">Send Instant Inquiry</h3>
-        <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.8rem;">Fill out your requirements for a quick callback and formal price quote.</p>
+        <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.8rem;">Fill out your requirements to send an instant email inquiry to our engineering team.</p>
 
         <form id="contactForm">
           <div class="form-group">
             <label for="contactName">Your Name *</label>
             <input type="text" id="contactName" class="form-control" placeholder="e.g. Ramesh Kumar" required>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Your Email Address *</label>
+            <input type="email" id="contactEmail" class="form-control" placeholder="e.g. ramesh@example.com" required>
           </div>
           <div class="form-group">
             <label for="contactPhone">Phone / WhatsApp Number *</label>
@@ -759,9 +763,14 @@
             <label for="contactMsg">Equipment Needed / Message</label>
             <textarea id="contactMsg" class="form-control" rows="4" placeholder="Describe the kitchen equipment or dimensions you need..."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;">
-            <i class="fa-brands fa-whatsapp" style="font-size: 1.1rem;"></i> Send via WhatsApp / Contact Now
-          </button>
+          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;">
+              <i class="fa-solid fa-paper-plane" style="font-size: 1.1rem;"></i> Send Instant Inquiry via Email
+            </button>
+            <button type="button" class="btn btn-outline" onclick="sendContactWhatsApp()" style="width: 100%; padding: 0.75rem; font-size: 0.9rem; color: #ffffff; border-color: rgba(255,255,255,0.25);">
+              <i class="fa-brands fa-whatsapp" style="font-size: 1rem; color: #25d366;"></i> Send via WhatsApp Instead
+            </button>
+          </div>
         </form>
       </div>
     </div>
@@ -845,8 +854,11 @@
         <span id="drawerSubtotal" style="color: var(--accent-hover);">₹0</span>
       </div>
       <div style="display: flex; flex-direction: column; gap: 0.6rem;">
-        <button class="btn btn-primary" onclick="sendQuoteWhatsApp()" style="width: 100%; padding: 0.8rem;">
-          <i class="fa-brands fa-whatsapp" style="font-size: 1.1rem;"></i> Send Quote Request via WhatsApp
+        <button class="btn btn-primary" onclick="sendQuoteEmail()" style="width: 100%; padding: 0.8rem;">
+          <i class="fa-solid fa-envelope" style="font-size: 1.1rem;"></i> Send Quote Request via Email
+        </button>
+        <button class="btn btn-outline" onclick="sendQuoteWhatsApp()" style="width: 100%; padding: 0.8rem; color: #ffffff; border-color: rgba(255,255,255,0.25);">
+          <i class="fa-brands fa-whatsapp" style="font-size: 1.1rem; color: #25d366;"></i> Send via WhatsApp
         </button>
         <button class="btn btn-dark" onclick="downloadQuotePDF()" style="width: 100%; padding: 0.8rem;">
           <i class="fa-solid fa-file-pdf" style="font-size: 1.1rem; color: #38bdf8;"></i> Print / Download Formal PDF Quote
