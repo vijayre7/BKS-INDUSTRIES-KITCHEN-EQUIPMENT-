@@ -1,6 +1,6 @@
 // BKS Industries - Modern Commercial Kitchen & SS Fabrication Application Logic
 
-// Complete Official BKS Industries Equipment Data Catalog (84 Items across 8 Categories)
+// Complete Official BKS Industries Equipment Data Catalog (71 Items across 8 Categories)
 const equipmentData = [
   // =========================================================================
   // 1. PREPARATION EQUIPMENT
@@ -81,21 +81,6 @@ const equipmentData = [
     desc: 'Sturdy open-base stainless steel table with 3-sided tubular cross bracing.'
   },
   {
-    id: 'eq-106',
-    name: 'SS Meat Cutting Table with Chopping Board',
-    category: 'prep',
-    categoryLabel: 'Preparation Equipment',
-    image: 'images/prep_table.png',
-    fuel: 'None',
-    powerKw: 0,
-    exhaustCfm: 0,
-    specs: ['High-Density Polyethylene Chopping Top', 'Heavy Duty Tubular SS Frame', 'Bottom Meat Tray / Bin Shelf', 'Hygienic Easy Wash Design'],
-    priceEstimate: '₹22,500',
-    priceValue: 22500,
-    dimensions: '48" L x 30" W x 34" H',
-    desc: 'Commercial butcher prep table with thick food-grade synthetic chopping board.'
-  },
-  {
     id: 'eq-107',
     name: 'SS Dough Kneading Machine',
     category: 'prep',
@@ -124,81 +109,6 @@ const equipmentData = [
     priceValue: 28500,
     dimensions: '30" L x 22" W x 42" H',
     desc: 'Heavy-duty commercial wet grinder for high volume idly and dosa batter.'
-  },
-  {
-    id: 'eq-109',
-    name: 'Potato Peeler Machine',
-    category: 'prep',
-    categoryLabel: 'Preparation Equipment',
-    image: 'images/idly_steamer.png',
-    fuel: 'Electric 220V',
-    powerKw: 1.0,
-    exhaustCfm: 0,
-    specs: ['Capacity: 5kg / 10kg / 15kg per Batch', 'Abrasive Silicon Carbide Carborundum Inner Coating', 'Integrated Water Flush Inlet', 'SS Body Casing'],
-    priceEstimate: '₹22,000',
-    priceValue: 22000,
-    dimensions: '20" L x 20" W x 34" H',
-    desc: 'Automatic electric root vegetable and potato peeler for fast prep.'
-  },
-  {
-    id: 'eq-110',
-    name: 'Vegetable Cutting Machine',
-    category: 'prep',
-    categoryLabel: 'Preparation Equipment',
-    image: 'images/prep_table.png',
-    fuel: 'Electric 220V',
-    powerKw: 0.75,
-    exhaustCfm: 0,
-    specs: ['Includes Slicing, Dicing & Grating Discs', 'Capacity: 150-300 kg/hr', 'Food Grade Aluminium & SS Body', 'Safety Interlock Switch'],
-    priceEstimate: '₹26,500',
-    priceValue: 26500,
-    dimensions: '22" L x 16" W x 24" H',
-    desc: 'Multipurpose commercial vegetable cutting and food processing machine.'
-  },
-  {
-    id: 'eq-111',
-    name: 'Meat Mincer / Bone Saw Machine',
-    category: 'prep',
-    categoryLabel: 'Preparation Equipment',
-    image: 'images/prep_table.png',
-    fuel: 'Electric 220V / 415V',
-    powerKw: 2.0,
-    exhaustCfm: 0,
-    specs: ['Heavy Duty Motor Drive System', 'Capacity: 120-250 kg/hr', 'Precision Alloy Cutting Blades', 'Full SS Sanitary Casing'],
-    priceEstimate: '₹36,000',
-    priceValue: 36000,
-    dimensions: '24" L x 18" W x 38" H',
-    desc: 'Commercial meat mincer and bone cutter machine for butcher shops and hotels.'
-  },
-  {
-    id: 'eq-112',
-    name: 'Batter Mixer / Pulverizer',
-    category: 'prep',
-    categoryLabel: 'Preparation Equipment',
-    image: 'images/baking_oven.png',
-    fuel: 'Electric 415V / 220V',
-    powerKw: 3.0,
-    exhaustCfm: 0,
-    specs: ['High RPM SS Beater Blades', 'Commercial Spice & Grain Grinding', 'Dust Free Closed Pulverizing Chamber', 'Heavy Duty Frame'],
-    priceEstimate: '₹31,500',
-    priceValue: 31500,
-    dimensions: '24" L x 24" W x 40" H',
-    desc: 'Industrial batter mixing unit and fine grain spice pulverizer.'
-  },
-  {
-    id: 'eq-113',
-    name: 'Garlic Peeling Machine',
-    category: 'prep',
-    categoryLabel: 'Preparation Equipment',
-    image: 'images/idly_steamer.png',
-    fuel: 'Electric 220V',
-    powerKw: 0.5,
-    exhaustCfm: 0,
-    specs: ['Pneumatic Air Pressure Peeling Tech', 'Peeling Rate: 95%+', 'Capacity: 20-30 kg/hr', 'No Damage to Garlic Clove'],
-    priceEstimate: '₹38,000',
-    priceValue: 38000,
-    dimensions: '22" L x 22" W x 38" H',
-    desc: 'Automatic dry garlic clove peeling machine for commercial food production.'
   },
 
   // =========================================================================
@@ -325,36 +235,6 @@ const equipmentData = [
     desc: 'Commercial overhead spring spray pre-rinse unit for dishwashing stations.'
   },
   {
-    id: 'eq-209',
-    name: 'Hood Type Dishwasher',
-    category: 'washing',
-    categoryLabel: 'Washing & Cleaning Equipment',
-    image: 'images/vertical_chiller.png',
-    fuel: 'Electric 415V 3-Phase',
-    powerKw: 9.5,
-    exhaustCfm: 300,
-    specs: ['Capacity: 50 - 60 Racks per Hour', 'High Temp Sanitizing Rinse Tank', 'Automatic Wash Cycle Timer', 'Full Stainless Steel Casing'],
-    priceEstimate: '₹1,85,000',
-    priceValue: 185000,
-    dimensions: '30" L x 30" W x 60" H',
-    desc: 'Heavy duty pass-through hood type commercial dishwasher machine.'
-  },
-  {
-    id: 'eq-210',
-    name: 'Under-Counter Dishwasher',
-    category: 'washing',
-    categoryLabel: 'Washing & Cleaning Equipment',
-    image: 'images/vertical_chiller.png',
-    fuel: 'Electric 220V',
-    powerKw: 4.5,
-    exhaustCfm: 0,
-    specs: ['Capacity: 30 Racks per Hour', 'Front Loading Compact Door', 'Built-in Rinse Aid Dispenser', 'Digital Temperature Display'],
-    priceEstimate: '₹95,000',
-    priceValue: 95000,
-    dimensions: '24" L x 24" W x 34" H',
-    desc: 'Compact under-counter commercial plate and glass washing machine.'
-  },
-  {
     id: 'eq-211',
     name: 'Conveyor Dishwasher',
     category: 'washing',
@@ -373,21 +253,6 @@ const equipmentData = [
   // =========================================================================
   // 3. COOKING EQUIPMENT
   // =========================================================================
-  {
-    id: 'eq-301',
-    name: 'Indian Gas Range (1, 2, 3, or 4 Burner)',
-    category: 'cooking',
-    categoryLabel: 'Cooking Equipment',
-    image: 'images/burner_oven.png',
-    fuel: 'LPG / PNG Gas',
-    powerKw: 0,
-    exhaustCfm: 600,
-    specs: ['Heavy Cast Iron BTU Burners', '16 Gauge SS 304 Casing', 'Removable Drip Trays', 'Heavy Duty Pan Support Grid'],
-    priceEstimate: '₹14,500',
-    priceValue: 14500,
-    dimensions: '24" to 66" L x 24" W x 34" H',
-    desc: 'Commercial Indian gas stove range available in 1, 2, 3, or 4 burner configurations.'
-  },
   {
     id: 'eq-302',
     name: 'Continental Gas Range',
@@ -633,21 +498,6 @@ const equipmentData = [
     desc: 'Commercial bakery deck oven available in 1, 2, or 3 deck configurations.'
   },
   {
-    id: 'eq-402',
-    name: 'Rotary Rack Oven',
-    category: 'bakery',
-    categoryLabel: 'Bakery & Cafe Equipment',
-    image: 'images/baking_oven.png',
-    fuel: 'Electric 415V / Gas / Diesel',
-    powerKw: 25.0,
-    exhaustCfm: 800,
-    specs: ['Holds 36 / 72 Bakery Trays', '360° Rotating Trolley System', 'Steam Generator Injection System', 'High Efficiency Heat Exchanger'],
-    priceEstimate: '₹3,80,000',
-    priceValue: 380000,
-    dimensions: '66" L x 54" W x 84" H',
-    desc: 'Industrial rotary rack baking oven for mass bread, toast, and biscuit manufacturing.'
-  },
-  {
     id: 'eq-403',
     name: 'Convection Oven',
     category: 'bakery',
@@ -663,21 +513,6 @@ const equipmentData = [
     desc: 'Commercial convection oven for even baking of pastries, cakes, and roasts.'
   },
   {
-    id: 'eq-404',
-    name: 'Planetary Mixer',
-    category: 'bakery',
-    categoryLabel: 'Bakery & Cafe Equipment',
-    image: 'images/baking_oven.png',
-    fuel: 'Electric 220V',
-    powerKw: 1.5,
-    exhaustCfm: 0,
-    specs: ['Capacity: 10L / 20L / 40L Bowl', 'Includes Wire Whisk, Dough Hook & Flat Beater', '3-Speed Mechanical Gearbox', 'SS 304 Removable Bowl'],
-    priceEstimate: '₹38,000',
-    priceValue: 38000,
-    dimensions: '22" L x 20" W x 38" H',
-    desc: 'Commercial planetary mixer for cake batter, cream whipping, and light dough.'
-  },
-  {
     id: 'eq-405',
     name: 'Spiral Dough Mixer',
     category: 'bakery',
@@ -691,21 +526,6 @@ const equipmentData = [
     priceValue: 68000,
     dimensions: '34" L x 22" W x 42" H',
     desc: 'Heavy duty spiral dough kneader machine for commercial bakeries and pizzerias.'
-  },
-  {
-    id: 'eq-406',
-    name: 'Bread Slicer Machine',
-    category: 'bakery',
-    categoryLabel: 'Bakery & Cafe Equipment',
-    image: 'images/prep_table.png',
-    fuel: 'Electric 220V',
-    powerKw: 0.37,
-    exhaustCfm: 0,
-    specs: ['31 Precision Stainless Blades', 'Uniform 12mm / 15mm Slice Thickness', 'Gravity Feed Loading Chute', 'Silent Low Vibration Operation'],
-    priceEstimate: '₹32,000',
-    priceValue: 32000,
-    dimensions: '26" L x 28" W x 30" H',
-    desc: 'Automatic commercial bread loaf slicing machine.'
   },
   {
     id: 'eq-407',
@@ -736,21 +556,6 @@ const equipmentData = [
     priceValue: 145000,
     dimensions: '28" L x 22" W x 20" H',
     desc: 'Professional commercial espresso coffee machine for cafes and restaurants.'
-  },
-  {
-    id: 'eq-409',
-    name: 'Coffee Bean Grinder',
-    category: 'bakery',
-    categoryLabel: 'Bakery & Cafe Equipment',
-    image: 'images/baking_oven.png',
-    fuel: 'Electric 220V',
-    powerKw: 0.35,
-    exhaustCfm: 0,
-    specs: ['64mm Flat Hardened Steel Burrs', 'Micro-Metric Grind Adjustment', 'On-Demand Fresh Dose Dispenser', 'Large 1.2kg Hopper'],
-    priceEstimate: '₹24,000',
-    priceValue: 24000,
-    dimensions: '10" L x 14" W x 22" H',
-    desc: 'Commercial coffee bean grinder for espresso and filter coffee.'
   },
   {
     id: 'eq-410',
@@ -1407,7 +1212,7 @@ const layoutPresets = {
     widthFt: 20,
     lengthFt: 15,
     items: [
-      { eqId: 'eq-301', x: 2, y: 2, label: 'Indian Gas Range' },
+      { eqId: 'eq-302', x: 2, y: 2, label: 'Continental Gas Range' },
       { eqId: 'eq-306', x: 7, y: 2, label: 'Dosa Bhatti' },
       { eqId: 'eq-102', x: 12, y: 2, label: 'SS Work Table' },
       { eqId: 'eq-309', x: 2, y: 8, label: 'Deep Fryer' },
@@ -1419,7 +1224,7 @@ const layoutPresets = {
     widthFt: 32,
     lengthFt: 25,
     items: [
-      { eqId: 'eq-301', x: 2, y: 2, label: 'Indian Gas Range' },
+      { eqId: 'eq-302', x: 2, y: 2, label: 'Continental Gas Range' },
       { eqId: 'eq-303', x: 8, y: 2, label: 'Chinese Range' },
       { eqId: 'eq-306', x: 14, y: 2, label: 'Dosa Bhatti' },
       { eqId: 'eq-102', x: 22, y: 2, label: 'SS Work Table' },
@@ -1434,7 +1239,7 @@ const layoutPresets = {
     widthFt: 50,
     lengthFt: 30,
     items: [
-      { eqId: 'eq-301', x: 2, y: 2, label: 'Indian Gas Range' },
+      { eqId: 'eq-302', x: 2, y: 2, label: 'Continental Gas Range' },
       { eqId: 'eq-310', x: 8, y: 2, label: 'Tilting Brat Pan' },
       { eqId: 'eq-305', x: 14, y: 2, label: 'Bulk Cooking Range' },
       { eqId: 'eq-102', x: 32, y: 2, label: 'SS Work Table' },
