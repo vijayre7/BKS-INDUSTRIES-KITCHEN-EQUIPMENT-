@@ -1968,3 +1968,94 @@ footer {
     align-items: stretch;
   }
 }
+
+/* Mobile Touch & Usability Enhancements for 2D Layout Planner & Turnkey Cost Estimator */
+@media (max-width: 768px) {
+  .planner-wrapper {
+    padding: 0.8rem;
+    overflow-x: hidden;
+  }
+  .planner-control-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+  .planner-presets-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .planner-dimensions-inputs {
+    flex-direction: column;
+    width: 100%;
+  }
+  .planner-dimensions-inputs label {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .planner-main-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .planner-palette-sidebar {
+    max-height: 220px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .planner-canvas-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
+    padding-bottom: 0.5rem;
+    border-radius: var(--radius-sm);
+  }
+  .planner-canvas-grid {
+    min-width: 550px;
+  }
+  .planner-analytics-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+  .planner-analytics-bar > div:last-child {
+    margin-left: 0;
+    flex-direction: column;
+    width: 100%;
+  }
+  .planner-analytics-bar button {
+    width: 100%;
+  }
+  
+  /* Turnkey Estimator Mobile Scaling */
+  .configurator-card {
+    grid-template-columns: 1fr;
+    padding: 1.2rem;
+  }
+  .type-select-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.6rem;
+  }
+  .type-option-btn {
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+  }
+  .modules-checklist {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .type-select-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .quote-drawer {
+    max-width: 100%;
+  }
+}
