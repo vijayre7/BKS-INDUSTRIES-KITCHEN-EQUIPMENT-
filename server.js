@@ -69,5 +69,3 @@ if (require.main === module) {
     console.log(`BKS Industries server running at http://localhost:${PORT}/`);
   });
 }
-
-module.exports = handleRequest;
