@@ -1,0 +1,12 @@
+# Googlebot & Search Engine Access Permissions
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Sitemap Location
+Sitemap: https://www.bksindustries.in/sitemap.xml
