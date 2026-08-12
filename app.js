@@ -1712,7 +1712,7 @@ function sendQuoteEmail() {
   body += `\nEstimated Equipment Total: ₹${totalEst.toLocaleString('en-IN')}\n\n`;
   body += `Please provide your formal price quotation, tax invoice details, and delivery timeline for Bengaluru setup.\n\n`;
   body += `-----------------------------------------------\n`;
-  body += `Dispatched via BKS Industries Official Website (www.bkskitchenequipment.com)`;
+  body += `Dispatched via BKS Industries Official Website (www.bksindustries.in)`;
 
   const recipient = 'Bks-industries@outlook.com';
   const ccRecipient = 'Bksindustries23@gmail.com';
@@ -1778,7 +1778,7 @@ function downloadQuotePDF() {
           <div class="brand">BKS INDUSTRIES</div>
           <div class="subbrand">Commercial Kitchen Equipments, Railings & General Fabrications</div>
           <div style="font-size: 12px; color: #475569; margin-top: 4px;">Lakshmidevinagar, Bengaluru 560096 | Ph: +91 81239 39433</div>
-          <div style="font-size: 11px; color: #0284c7;">Email: Bks-industries@outlook.com / Bksindustries23@gmail.com | Web: www.bkskitchenequipment.com</div>
+          <div style="font-size: 11px; color: #0284c7;">Email: Bks-industries@outlook.com / Bksindustries23@gmail.com | Web: www.bksindustries.in</div>
         </div>
         <div class="meta-box">
           <div style="font-size: 18px; font-weight: 800; color: #0284c7;">FORMAL QUOTATION</div>
@@ -2263,7 +2263,7 @@ function handleContactSubmit(e) {
   body += `Business / Kitchen Type: ${kType}\n\n`;
   body += `Equipment Requirements & Project Notes:\n${msg || 'No additional notes provided.'}\n\n`;
   body += `-----------------------------------------------\n`;
-  body += `Dispatched via BKS Industries Official Website (www.bkskitchenequipment.com)`;
+  body += `Dispatched via BKS Industries Official Website (www.bksindustries.in)`;
 
   const mailtoUrl = `mailto:${recipient}?cc=${ccRecipient}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
