@@ -1296,7 +1296,13 @@ function showToast(message, type = 'success') {
   setTimeout(() => toast.classList.add('show'), 10);
   setTimeout(() => {
     toast.classList.remove('show');
-    setTimeout(() => toast.remove(), 300);
+    setTimeout(() => {
+      if (toast && typeof toast.remove === 'function') {
+        toast.remove();
+      } else if (toast && toast.parentNode) {
+        toast.parentNode.removeChild(toast);
+      }
+    }, 300);
   }, 3000);
 }
 
@@ -1432,8 +1438,10 @@ function setupEventListeners() {
 }
 
 function closeQuoteDrawer() {
-  document.getElementById('drawerBackdrop').classList.remove('active');
-  document.getElementById('quoteDrawer').classList.remove('active');
+  const backdrop = document.getElementById('drawerBackdrop');
+  const drawer = document.getElementById('quoteDrawer');
+  if (backdrop) backdrop.classList.remove('active');
+  if (drawer) drawer.classList.remove('active');
 }
 
 // Render Equipment Catalog
@@ -1463,7 +1471,7 @@ function renderCatalog() {
   container.innerHTML = filtered.map(item => `
     <div class="equipment-card">
       <div class="card-image-wrap">
-        <img src="${item.image}" alt="${item.name}">
+        <img src="${item.image}" alt="${item.name} - Commercial Kitchen Equipment Manufacturer BKS Industries Bangalore" width="300" height="200" loading="lazy" decoding="async">
         <span class="category-tag">${item.categoryLabel}</span>
       </div>
       <div class="card-body">
@@ -1499,7 +1507,7 @@ function renderBlogsGrid() {
   container.innerHTML = blogArticles.map(article => `
     <div class="blog-card">
       <div class="blog-image-wrap">
-        <img src="${article.image}" alt="${article.title}">
+        <img src="${article.image}" alt="${article.title} - BKS Industries Commercial Kitchen Guide Bangalore" width="350" height="200" loading="lazy" decoding="async">
         <span class="blog-category-tag">${article.category}</span>
       </div>
       <div class="blog-body">
@@ -1537,7 +1545,7 @@ function openBlogModal(id) {
           </div>
         </div>
 
-        <img src="${article.image}" style="width: 100%; height: 280px; object-fit: cover; border-radius: 14px; margin-bottom: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.15);">
+        <img src="${article.image}" alt="${article.title} - BKS Industries Commercial Kitchen Guide" style="width: 100%; height: 280px; object-fit: cover; border-radius: 14px; margin-bottom: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.15);" width="800" height="280" loading="lazy" decoding="async">
 
         <div class="blog-article-content" style="color: #cbd5e1; line-height: 1.7; font-size: 0.98rem; margin-bottom: 2rem;">
           ${article.content}
@@ -1597,8 +1605,10 @@ function addToQuote(id, customPrice = null, customSpecNotes = '') {
   updateCartUI();
   showToast(`Added "${item.name}" to Quote List`);
 
-  document.getElementById('drawerBackdrop').classList.add('active');
-  document.getElementById('quoteDrawer').classList.add('active');
+  const backdrop = document.getElementById('drawerBackdrop');
+  const drawer = document.getElementById('quoteDrawer');
+  if (backdrop) backdrop.classList.add('active');
+  if (drawer) drawer.classList.add('active');
 }
 
 // Update Cart Drawer UI
@@ -1906,11 +1916,14 @@ function updateConfigurator() {
 }
 
 function sendConfiguratorWhatsApp() {
+  const totalValElem = document.getElementById('configTotalVal');
+  const totalValText = totalValElem ? totalValElem.innerText : '₹0';
+
   let text = `*Turnkey Kitchen Estimator Inquiry - BKS Industries*\n\n`;
   text += `*Kitchen Concept:* ${configState.type.replace('_', ' ').toUpperCase()}\n`;
   text += `*Carpet Area:* ${configState.sizeSqFt} sq. ft.\n`;
   text += `*Selected Modules:* ${configState.modules.join(', ').toUpperCase()}\n`;
-  text += `*Estimated Budget:* ${document.getElementById('configTotalVal').innerText}\n\n`;
+  text += `*Estimated Budget:* ${totalValText}\n\n`;
   text += `Please send an engineer to inspect our site in Bengaluru and share an itemized quote.`;
 
   const phone = '918123939433';
@@ -1930,7 +1943,7 @@ function openSpecModal(id) {
         
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;" class="modal-grid-wrap">
           <div>
-            <img src="${item.image}" style="width: 100%; height: 240px; object-fit: cover; border-radius: 14px; border: 1px solid var(--steel-border);">
+            <img src="${item.image}" alt="${item.name} - BKS Industries SS Fabrication Bangalore" style="width: 100%; height: 240px; object-fit: cover; border-radius: 14px; border: 1px solid var(--steel-border);" width="400" height="240" loading="lazy" decoding="async">
             <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
               <span class="badge-tag"><i class="fa-solid fa-layer-group"></i> ${item.categoryLabel}</span>
               <span class="badge-tag"><i class="fa-solid fa-ruler-combined"></i> ${item.dimensions}</span>
@@ -2017,10 +2030,14 @@ function calculateModalPrice(id) {
 function addModalCustomToQuote(id) {
   const calculatedPrice = calculateModalPrice(id);
   const gaugeSelect = document.getElementById('modalGauge');
-  const gaugeText = gaugeSelect ? gaugeSelect.options[gaugeSelect.selectedIndex].text.split('-')[1] || '' : '';
+  let gaugeText = '';
+  if (gaugeSelect && gaugeSelect.selectedIndex >= 0 && gaugeSelect.options[gaugeSelect.selectedIndex]) {
+    const optText = gaugeSelect.options[gaugeSelect.selectedIndex].text;
+    gaugeText = (optText.split('-')[1] || optText).trim();
+  }
 
   closeSpecModal();
-  addToQuote(id, calculatedPrice, gaugeText.trim());
+  addToQuote(id, calculatedPrice, gaugeText);
 }
 
 function closeSpecModal() {
@@ -2127,7 +2144,7 @@ function removePlannerItem(placedId) {
 
 function clearPlannerGrid() {
   if (plannerState.placedItems.length === 0) return;
-  if (confirm('Are you sure you want to clear all equipment from the layout grid?')) {
+  if (typeof confirm === 'undefined' || confirm('Are you sure you want to clear all equipment from the layout grid?')) {
     plannerState.placedItems = [];
     updatePlannerUI();
   }
@@ -2177,6 +2194,11 @@ function exportPlannerLayoutWhatsApp() {
     return;
   }
 
+  const cfmElem = document.getElementById('planStatCFM');
+  const powerElem = document.getElementById('planStatPower');
+  const cfmText = cfmElem ? cfmElem.innerText : 'N/A';
+  const powerText = powerElem ? powerElem.innerText : 'N/A';
+
   let text = `*Custom Kitchen Floor Plan Inquiry - BKS Industries*\n\n`;
   text += `*Dimensions:* ${plannerState.widthFt} ft x ${plannerState.lengthFt} ft (${plannerState.widthFt * plannerState.lengthFt} sq.ft)\n`;
   text += `*Placed Equipment (${plannerState.placedItems.length} Units):*\n`;
@@ -2190,8 +2212,8 @@ function exportPlannerLayoutWhatsApp() {
     }
   });
 
-  text += `\n*Calculated Airflow Exhaust Required:* ${document.getElementById('planStatCFM').innerText}\n`;
-  text += `*Calculated Electric/Gas Load:* ${document.getElementById('planStatPower').innerText}\n`;
+  text += `\n*Calculated Airflow Exhaust Required:* ${cfmText}\n`;
+  text += `*Calculated Electric/Gas Load:* ${powerText}\n`;
   text += `*Estimated Turnkey Budget:* ₹${totalCost.toLocaleString('en-IN')}\n\n`;
   text += `Please send an engineer with detailed AutoCAD floor layout drawings.`;
 
@@ -2204,9 +2226,13 @@ function exportPlannerLayoutWhatsApp() {
 // Kitchen Engineering Calculators Logic
 // -------------------------------------------------------------
 function calculateCFM() {
-  const length = parseFloat(document.getElementById('cfmLength').value) || 8;
-  const depth = parseFloat(document.getElementById('cfmDepth').value) || 3.5;
-  const typeMultiplier = parseFloat(document.getElementById('cfmCookingType').value) || 350;
+  const lengthInput = document.getElementById('cfmLength');
+  const depthInput = document.getElementById('cfmDepth');
+  const typeInput = document.getElementById('cfmCookingType');
+
+  const length = lengthInput ? (parseFloat(lengthInput.value) || 8) : 8;
+  const depth = depthInput ? (parseFloat(depthInput.value) || 3.5) : 3.5;
+  const typeMultiplier = typeInput ? (parseFloat(typeInput.value) || 350) : 350;
 
   const requiredCFM = Math.round(length * typeMultiplier);
   const ductAreaSqFt = requiredCFM / 1500;
@@ -2227,8 +2253,11 @@ function calculateCFM() {
 }
 
 function calculateLPG() {
-  const burnerCount = parseInt(document.getElementById('lpgBurners').value) || 4;
-  const hours = parseFloat(document.getElementById('lpgHours').value) || 10;
+  const burnerInput = document.getElementById('lpgBurners');
+  const hoursInput = document.getElementById('lpgHours');
+
+  const burnerCount = burnerInput ? (parseInt(burnerInput.value) || 4) : 4;
+  const hours = hoursInput ? (parseFloat(hoursInput.value) || 10) : 10;
 
   const dailyKg = burnerCount * hours * 0.4;
   const monthlyCylinders = Math.ceil((dailyKg * 30) / 19);
@@ -2245,12 +2274,19 @@ function calculateLPG() {
 
 // Contact Form Handler - Direct Email Dispatch to BKS Industries
 function handleContactSubmit(e) {
-  e.preventDefault();
-  const name = document.getElementById('contactName').value;
-  const emailInput = document.getElementById('contactEmail') ? document.getElementById('contactEmail').value : '';
-  const phoneInput = document.getElementById('contactPhone').value;
-  const kType = document.getElementById('contactKitchenType').value;
-  const msg = document.getElementById('contactMsg').value;
+  if (e && e.preventDefault) e.preventDefault();
+
+  const nameEl = document.getElementById('contactName');
+  const emailEl = document.getElementById('contactEmail');
+  const phoneEl = document.getElementById('contactPhone');
+  const kTypeEl = document.getElementById('contactKitchenType');
+  const msgEl = document.getElementById('contactMsg');
+
+  const name = nameEl ? nameEl.value : 'Client';
+  const emailInput = emailEl ? emailEl.value : '';
+  const phoneInput = phoneEl ? phoneEl.value : '';
+  const kType = kTypeEl ? kTypeEl.value : 'Commercial Kitchen Setup';
+  const msg = msgEl ? msgEl.value : '';
 
   const recipient = 'Bks-industries@outlook.com';
   const ccRecipient = 'Bksindustries23@gmail.com';
@@ -2271,16 +2307,24 @@ function handleContactSubmit(e) {
   window.location.href = mailtoUrl;
 
   showToast('Opening email client to send your instant inquiry to Bks-industries@outlook.com');
-  document.getElementById('contactForm').reset();
+  
+  const formEl = document.getElementById('contactForm');
+  if (formEl) formEl.reset();
 }
 
 // Optional WhatsApp Dispatch Handler for Contact Form
 function sendContactWhatsApp() {
-  const name = document.getElementById('contactName').value || 'Client';
-  const emailInput = document.getElementById('contactEmail') ? document.getElementById('contactEmail').value : '';
-  const phoneInput = document.getElementById('contactPhone').value || '';
-  const kType = document.getElementById('contactKitchenType').value;
-  const msg = document.getElementById('contactMsg').value || '';
+  const nameEl = document.getElementById('contactName');
+  const emailEl = document.getElementById('contactEmail');
+  const phoneEl = document.getElementById('contactPhone');
+  const kTypeEl = document.getElementById('contactKitchenType');
+  const msgEl = document.getElementById('contactMsg');
+
+  const name = nameEl ? nameEl.value || 'Client' : 'Client';
+  const emailInput = emailEl ? emailEl.value : '';
+  const phoneInput = phoneEl ? phoneEl.value || '' : '';
+  const kType = kTypeEl ? kTypeEl.value || 'Commercial Kitchen Setup' : 'Commercial Kitchen Setup';
+  const msg = msgEl ? msgEl.value || '' : '';
 
   let text = `*New Direct Inquiry - BKS Industries Website*\n\n`;
   text += `*Name:* ${name}\n`;

@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHRKRLWRJD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KHRKRLWRJD');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
+  <!-- Preconnect & Resource Hints for Core Web Vitals Performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
   <!-- Primary SEO Meta Tags -->
   <title>BKS Industries | Commercial Kitchen Equipment Manufacturer & SS Fabricators Bangalore</title>
   <meta name="title" content="BKS Industries | Commercial Kitchen Equipment Manufacturer & SS Fabricators Bangalore">
@@ -15,14 +31,25 @@
   <meta name="bingbot" content="index, follow">
   <meta name="language" content="English">
   <meta name="author" content="BKS Industries">
+
+  <!-- Local GEO Target Meta Tags for Google Maps & Local SEO -->
+  <meta name="geo.region" content="IN-KA">
+  <meta name="geo.placename" content="Bengaluru">
+  <meta name="geo.position" content="13.0298;77.5255">
+  <meta name="ICBM" content="13.0298, 77.5255">
+  
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE">
+
   <link rel="canonical" href="https://www.bksindustries.in/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.bksindustries.in/sitemap.xml">
 
   <!-- Open Graph / Facebook / WhatsApp SEO -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.bksindustries.in/">
   <meta property="og:title" content="BKS Industries | Commercial Kitchen Equipment Manufacturer Bangalore">
   <meta property="og:description" content="Premier manufacturer of SS 304 commercial kitchen equipment, industrial gas stoves, Bain Marie warmers, and cloud kitchen setups in Bengaluru. 5.0 Rated. Call +91 81239 39433.">
-  <meta property="og:image" content="images/hero.png">
+  <meta property="og:image" content="https://www.bksindustries.in/images/hero.png">
   <meta property="og:locale" content="en_IN">
   <meta property="og:site_name" content="BKS Industries">
 
@@ -31,80 +58,125 @@
   <meta name="twitter:url" content="https://www.bksindustries.in/">
   <meta name="twitter:title" content="BKS Industries | Commercial Kitchen Equipment Manufacturer Bangalore">
   <meta name="twitter:description" content="Top rated commercial kitchen machinery manufacturer & stainless steel fabricators in Bengaluru. Call +91 81239 39433.">
-  <meta name="twitter:image" content="images/hero.png">
+  <meta name="twitter:image" content="https://www.bksindustries.in/images/hero.png">
 
   <!-- Schema.org JSON-LD Structured Data for LocalBusiness & Manufacturer -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "Manufacturer"],
-    "name": "BKS Industries",
-    "legalName": "B.K.S. Industries",
-    "vatID": "29AWOPM7903Q1ZH",
-    "taxID": "29AWOPM7903Q1ZH",
-    "image": "https://www.bksindustries.in/images/logo.jpg",
-    "@id": "https://www.bksindustries.in/",
-    "url": "https://www.bksindustries.in/",
-    "telephone": ["+918123939433", "+919880131901"],
-    "email": ["Bks-industries@outlook.com", "Bksindustries23@gmail.com"],
-    "priceRange": "₹₹",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Site No. 22, 1st Cross, 1st Main, Kempamma Layout, Lakshmidevinagar",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560096",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 13.0298,
-      "longitude": 77.5255
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "opens": "09:00",
-      "closes": "20:00"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "53"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Commercial Kitchen Equipment Catalog",
-      "itemListElement": [
-        {
-          "@type": "OfferCatalog",
-          "name": "Industrial Gas Cooking Ranges & Burners"
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "Manufacturer"],
+        "@id": "https://www.bksindustries.in/#organization",
+        "name": "BKS Industries",
+        "legalName": "B.K.S. Industries",
+        "vatID": "29AWOPM7903Q1ZH",
+        "taxID": "29AWOPM7903Q1ZH",
+        "image": "https://www.bksindustries.in/images/logo.jpg",
+        "logo": "https://www.bksindustries.in/images/logo.jpg",
+        "url": "https://www.bksindustries.in/",
+        "telephone": ["+918123939433", "+919880131901"],
+        "email": ["Bks-industries@outlook.com", "Bksindustries23@gmail.com"],
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Site No. 22, 1st Cross, 1st Main, Kempamma Layout, Lakshmidevinagar",
+          "addressLocality": "Bengaluru",
+          "addressRegion": "Karnataka",
+          "postalCode": "560096",
+          "addressCountry": "IN"
         },
-        {
-          "@type": "OfferCatalog",
-          "name": "Commercial Dosa Tawas & Idly Steamers"
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 13.0298,
+          "longitude": 77.5255
         },
-        {
-          "@type": "OfferCatalog",
-          "name": "Bain Marie Hot Food Display Counters"
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "20:00"
         },
-        {
-          "@type": "OfferCatalog",
-          "name": "Kitchen Exhaust Ventilation Hoods & Motors"
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "53"
         },
-        {
+        "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "SS 304 Work Tables & Sink Units"
+          "name": "Commercial Kitchen Equipment Catalog",
+          "itemListElement": [
+            { "@type": "OfferCatalog", "name": "Industrial Gas Cooking Ranges & Burners" },
+            { "@type": "OfferCatalog", "name": "Commercial Dosa Tawas & Idly Steamers" },
+            { "@type": "OfferCatalog", "name": "Bain Marie Hot Food Display Counters" },
+            { "@type": "OfferCatalog", "name": "Kitchen Exhaust Ventilation Hoods & Motors" },
+            { "@type": "OfferCatalog", "name": "SS 304 Work Tables & Sink Units" }
+          ]
         }
-      ]
-    }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.bksindustries.in/#website",
+        "url": "https://www.bksindustries.in/",
+        "name": "BKS Industries Commercial Kitchen Equipment",
+        "description": "Commercial Kitchen Equipment Manufacturer & SS Fabricators in Bengaluru",
+        "publisher": { "@id": "https://www.bksindustries.in/#organization" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.bksindustries.in/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.bksindustries.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Commercial Kitchen Equipment",
+            "item": "https://www.bksindustries.in/#catalog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "SS Fabrication Bengaluru",
+            "item": "https://www.bksindustries.in/#gallery"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.bksindustries.in/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why is SS 304 stainless steel recommended for commercial kitchen equipment in Bengaluru?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SS 304 food-grade stainless steel contains 18% chromium and 8% nickel, rendering it completely rust-proof, corrosion-resistant, non-porous, and hygienic under heavy commercial kitchen usage, moisture, and high heat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How to calculate the exhaust hood CFM required for a hotel or cloud kitchen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Exhaust hood CFM is calculated based on hood length, depth, and cooking type. Heavy Indian/Chinese cooking ranges typically require 350 to 450 CFM per linear foot of hood length paired with a 1,500-1,800 FPM duct velocity blower."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does BKS Industries provide custom AutoCAD kitchen layout design and installation in Bangalore?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, BKS Industries offers complete end-to-end turnkey commercial kitchen solutions including 2D/3D floor layout planning, custom SS fabrication, gas pipeline fitting, exhaust hood installation, and on-site delivery across Bengaluru."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -151,7 +223,7 @@
   <header class="navbar">
     <div class="nav-container">
       <a href="#" class="brand-logo">
-        <img src="images/logo.jpg" alt="BKSI Logo" class="brand-logo-img">
+        <img src="images/logo.jpg" alt="BKS Industries Logo - Commercial Kitchen Equipment Manufacturer Bangalore" class="brand-logo-img" width="50" height="50" decoding="async">
         <div>
           <div class="brand-text-name">BKS INDUSTRIES</div>
           <div class="brand-text-sub">Commercial Kitchen Equipments</div>
@@ -190,7 +262,7 @@
   <div class="mobile-nav-drawer" id="mobileNavDrawer">
     <div class="mobile-nav-header">
       <div style="display: flex; align-items: center; gap: 0.6rem;">
-        <img src="images/logo.jpg" style="height: 36px; border-radius: 6px;">
+        <img src="images/logo.jpg" alt="BKS Industries Logo" style="height: 36px; border-radius: 6px;" width="36" height="36" loading="lazy" decoding="async">
         <span style="font-weight: 800; color: #ffffff; font-size: 1.1rem;">BKS INDUSTRIES</span>
       </div>
       <button id="closeMobileNavBtn" style="background: none; border: none; color: #ffffff; font-size: 1.5rem; cursor: pointer;">&times;</button>
@@ -259,7 +331,7 @@
 
       <div class="hero-media-wrapper">
         <div class="hero-image-card">
-          <img src="images/hero.png" alt="BKS Commercial Kitchen Setup">
+          <img src="images/hero.png" alt="Commercial Kitchen Setup and Stainless Steel Machinery Fabrication - BKS Industries Bengaluru" width="600" height="400" decoding="async">
         </div>
         <div class="floating-glass-card float-rating">
           <div style="background: rgba(245,158,11,0.2); color: #f59e0b; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
@@ -581,7 +653,7 @@
       <!-- Gallery Card 1 -->
       <div class="gallery-card" style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
         <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" style="display: block; height: 220px; overflow: hidden; position: relative;" title="Click to view live photo on Google My Business">
-          <img src="images/installation_cloud_kitchen.png" alt="Cloud Kitchen Commercial Installation Bengaluru" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+          <img src="images/installation_cloud_kitchen.png" alt="Cloud Kitchen Stainless Steel Equipment Installation Bangalore - BKS Industries" width="400" height="280" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
           <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); color: #38bdf8; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
             <i class="fa-solid fa-camera"></i> Google Live Photo
           </span>
@@ -719,7 +791,7 @@
   </section>
 
   <!-- Photo Gallery Showcase -->
-  <section id="gallery" class="section">
+  <section id="showcase-gallery" class="section">
     <div class="section-header">
       <span class="section-subtitle">Manufacturing & Fabrication</span>
       <h2 class="section-title">Actual Project Installation Gallery</h2>
@@ -728,37 +800,37 @@
 
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="images/hero.png" alt="Commercial Kitchen Setup">
+        <img src="images/hero.png" alt="Turnkey Commercial Kitchen Setup Bangalore - BKS Industries" width="380" height="250" loading="lazy" decoding="async">
         <div class="gallery-overlay">
           <div class="gallery-title">Hotel Kitchen Turnkey Setup</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/prep_table.png" alt="Stainless Steel Work Table">
+        <img src="images/prep_table.png" alt="SS 304 Commercial Preparation Work Table & Sink Unit Bengaluru - BKS Industries" width="380" height="250" loading="lazy" decoding="async">
         <div class="gallery-overlay">
           <div class="gallery-title">SS 304 Work Table & Sink</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/bain_marie.png" alt="Bain Marie Buffet Display">
+        <img src="images/bain_marie.png" alt="Commercial Bain Marie Hot Food Display Warmer Counter Bangalore - BKS Industries" width="380" height="250" loading="lazy" decoding="async">
         <div class="gallery-overlay">
           <div class="gallery-title">Bain Marie Food Warmer</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/burner_oven.png" alt="Industrial Burner Range">
+        <img src="images/burner_oven.png" alt="Industrial High Pressure Commercial Gas Cooking Range Stove Bangalore - BKS Industries" width="380" height="250" loading="lazy" decoding="async">
         <div class="gallery-overlay">
           <div class="gallery-title">High Pressure Cooking Ranges</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/exhaust_hood.png" alt="Exhaust Hood Ventilation">
+        <img src="images/exhaust_hood.png" alt="Commercial Kitchen Stainless Steel Ventilation Exhaust Hood System Bangalore - BKS Industries" width="380" height="250" loading="lazy" decoding="async">
         <div class="gallery-overlay">
           <div class="gallery-title">Commercial Hood & Ducting</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/dosa_tawa.png" alt="Dosa Hot Plate Range">
+        <img src="images/dosa_tawa.png" alt="Commercial Heavy Duty SS Dosa Tawa Hot Plate Range Bangalore - BKS Industries" width="380" height="250" loading="lazy" decoding="async">
         <div class="gallery-overlay">
           <div class="gallery-title">Dosa Tawa Hot Plate Unit</div>
         </div>
@@ -937,7 +1009,7 @@
     <div class="footer-container">
       <div class="footer-brand">
         <a href="#" class="brand-logo" style="color: #ffffff;">
-          <img src="images/logo.jpg" alt="BKSI Logo" class="brand-logo-img">
+          <img src="images/logo.jpg" alt="BKS Industries Logo - Commercial Kitchen Equipment Manufacturer Bangalore" class="brand-logo-img" width="50" height="50" decoding="async">
           <div>
             <div class="brand-text-name" style="color: #ffffff;">B.K.S. INDUSTRIES</div>
             <div class="brand-text-sub" style="color: #94a3b8;">Kitchen Equipments & SS Fabrication</div>
