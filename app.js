@@ -1778,7 +1778,7 @@ function downloadQuotePDF() {
           <div class="brand">BKS INDUSTRIES</div>
           <div class="subbrand">Commercial Kitchen Equipments, Railings & General Fabrications</div>
           <div style="font-size: 12px; color: #475569; margin-top: 4px;">Lakshmidevinagar, Bengaluru 560096 | Ph: +91 81239 39433</div>
-          <div style="font-size: 11px; color: #0284c7;">Email: Bks-industries@outlook.com / Bksindustries23@gmail.com | Web: www.bksindustries.in</div>
+          <div style="font-size: 11px; color: #0284c7;">GSTIN: 29AWOPM7903Q1ZH | Email: Bks-industries@outlook.com / Bksindustries23@gmail.com | Web: www.bksindustries.in</div>
         </div>
         <div class="meta-box">
           <div style="font-size: 18px; font-weight: 800; color: #0284c7;">FORMAL QUOTATION</div>
@@ -1797,6 +1797,7 @@ function downloadQuotePDF() {
         <div>
           <div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">MANUFACTURER DETAILS:</div>
           <div>BKS Industries (SS 304 Certified)</div>
+          <div><strong>GSTIN:</strong> 29AWOPM7903Q1ZH</div>
           <div>Lakshmidevinagar, Bengaluru 560096</div>
         </div>
       </div>
