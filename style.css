@@ -28,12 +28,12 @@
   --accent-hover: #fbbf24;
   --accent-light: rgba(245, 158, 11, 0.18);
   
-  --steel: #94a3b8;
+  --steel: #cbd5e1;
   --steel-light: rgba(255, 255, 255, 0.05);
   --steel-border: rgba(255, 255, 255, 0.12);
   
   --text-dark: #f8fafc;
-  --text-muted: #94a3b8;
+  --text-muted: #cbd5e1;
   --text-light: #ffffff;
   
   --success: #10b981;
@@ -95,7 +95,7 @@ button {
 
 .badge-new-pill {
   background: var(--accent);
-  color: #ffffff;
+  color: #0f172a;
   font-size: 0.65rem;
   font-weight: 800;
   padding: 0.1rem 0.4rem;
@@ -362,9 +362,9 @@ button {
   top: -5px;
   right: -5px;
   background: var(--accent);
-  color: #ffffff;
+  color: #0f172a;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -627,7 +627,7 @@ button {
 }
 
 .section-subtitle {
-  color: var(--accent);
+  color: #fbbf24;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.85rem;
@@ -722,7 +722,7 @@ button {
 
 .category-tab.active {
   background: var(--accent);
-  color: #ffffff;
+  color: #0f172a;
   border-color: var(--accent);
   box-shadow: 0 0 18px rgba(245, 158, 11, 0.4);
 }
@@ -1015,7 +1015,7 @@ button {
 
 .preset-btn.active {
   background: var(--accent);
-  color: #ffffff;
+  color: #0f172a;
   border-color: var(--accent);
   box-shadow: 0 0 14px rgba(245, 158, 11, 0.4);
 }
@@ -1212,9 +1212,9 @@ button {
 
 .analytic-label {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: #cbd5e1;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .analytic-val {
