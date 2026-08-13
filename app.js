@@ -1269,13 +1269,22 @@ let plannerState = {
   placedItems: []
 };
 
-// DOM Initializer
+// DOM Initializer (Chunked to eliminate long main-thread tasks)
 document.addEventListener('DOMContentLoaded', () => {
-  renderCatalog();
-  renderBlogsGrid();
   setupEventListeners();
-  updateConfigurator();
-  initFloorPlanPlanner();
+  renderCatalog();
+
+  // Yield main thread before non-critical component rendering
+  requestAnimationFrame(() => {
+    updateConfigurator();
+    renderBlogsGrid();
+
+    setTimeout(() => {
+      if (typeof initFloorPlanPlanner === 'function') {
+        initFloorPlanPlanner();
+      }
+    }, 20);
+  });
 });
 
 // Toast Helper
