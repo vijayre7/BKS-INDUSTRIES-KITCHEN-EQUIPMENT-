@@ -3,14 +3,14 @@
 
 :root {
   --bg-main: #080c14;
-  --bg-card: rgba(15, 23, 42, 0.65);
-  --bg-card-hover: rgba(30, 41, 59, 0.75);
-  --bg-dark: #090d16;
-  --bg-dark-secondary: #0f172a;
+  --bg-card: rgba(13, 27, 42, 0.75);
+  --bg-card-hover: rgba(20, 38, 59, 0.85);
+  --bg-dark: #0D1B2A;
+  --bg-dark-secondary: #142436;
   
-  --primary: #0284c7;
-  --primary-hover: #0369a1;
-  --primary-light: rgba(2, 132, 199, 0.18);
+  --primary: #0082CA;
+  --primary-hover: #00639b;
+  --primary-light: rgba(0, 130, 202, 0.18);
   
   --accent: #f59e0b;
   --accent-hover: #fbbf24;
@@ -33,7 +33,7 @@
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 20px 45px -10px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 30px rgba(245, 158, 11, 0.3);
+  --shadow-glow: 0 0 30px rgba(0, 130, 202, 0.35);
   --glass-glow: inset 0 1px 0 0 rgba(255, 255, 255, 0.18);
   
   --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -2059,3 +2059,5 @@ footer {
     max-width: 100%;
   }
 }
+
+

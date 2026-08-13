@@ -1638,7 +1638,7 @@ function updateCartUI() {
     totalCost += itemTotal;
     return `
       <div style="display: flex; gap: 0.8rem; align-items: center; padding: 0.9rem 0; border-bottom: 1px solid #e2e8f0;">
-        <img src="${item.image}" style="width: 56px; height: 56px; border-radius: 10px; object-fit: cover; border: 1px solid #cbd5e1;">
+        <img src="${item.image}" alt="${item.name} - Commercial Kitchen Equipment BKS Industries Bangalore" style="width: 56px; height: 56px; border-radius: 10px; object-fit: cover; border: 1px solid #cbd5e1;" width="56" height="56" loading="lazy" decoding="async">
         <div style="flex: 1; min-width: 0;">
           <h4 style="font-size: 0.88rem; font-weight: 700; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.name}</h4>
           ${item.notes ? `<p style="font-size: 0.72rem; color: #0284c7; font-weight: 600;">${item.notes}</p>` : ''}
@@ -2085,7 +2085,7 @@ function renderPlannerPalette() {
 
   paletteContainer.innerHTML = equipmentData.map(item => `
     <div class="planner-palette-item" onclick="addEquipmentToPlanner('${item.id}')" title="Click to add ${item.name} to layout canvas">
-      <img src="${item.image}" alt="${item.name}">
+      <img src="${item.image}" alt="${item.name} - Commercial Kitchen Equipment BKS Industries Bangalore">
       <div>
         <div style="font-weight: 700; font-size: 0.82rem; color: #ffffff;">${item.name}</div>
         <div style="font-size: 0.72rem; color: #94a3b8;">${item.dimensions} • ${item.priceEstimate}</div>
@@ -2337,3 +2337,6 @@ function sendContactWhatsApp() {
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
   window.open(url, '_blank');
 }
+
+
+
