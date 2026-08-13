@@ -1957,8 +1957,8 @@ function openSpecModal(id) {
             
             <form id="modalCustomizerForm" onchange="calculateModalPrice('${item.id}')">
               <div style="margin-bottom: 0.8rem;">
-                <label style="font-size: 0.82rem; font-weight: 700; color: #0f172a;">Stainless Steel Grade & Gauge:</label>
-                <select id="modalGauge" class="form-control" style="padding: 0.4rem 0.8rem; font-size: 0.85rem; margin-top: 0.2rem;">
+                <label for="modalGauge" style="font-size: 0.82rem; font-weight: 700; color: #0f172a;">Stainless Steel Grade & Gauge:</label>
+                <select id="modalGauge" class="form-control" style="padding: 0.4rem 0.8rem; font-size: 0.85rem; margin-top: 0.2rem;" aria-label="Stainless Steel Grade and Gauge">
                   <option value="1.0" selected>SS 304 Food Grade - 16 Gauge Heavy Duty</option>
                   <option value="0.88">SS 304 Food Grade - 18 Gauge Standard</option>
                   <option value="1.15">SS 316 Premium Chemical/Acid Resistance (+15%)</option>
@@ -1966,8 +1966,8 @@ function openSpecModal(id) {
               </div>
 
               <div style="margin-bottom: 0.8rem;">
-                <label style="font-size: 0.82rem; font-weight: 700; color: #0f172a;">Power / Fuel Configuration:</label>
-                <select id="modalFuel" class="form-control" style="padding: 0.4rem 0.8rem; font-size: 0.85rem; margin-top: 0.2rem;">
+                <label for="modalFuel" style="font-size: 0.82rem; font-weight: 700; color: #0f172a;">Power / Fuel Configuration:</label>
+                <select id="modalFuel" class="form-control" style="padding: 0.4rem 0.8rem; font-size: 0.85rem; margin-top: 0.2rem;" aria-label="Power or Fuel Configuration">
                   <option value="standard" selected>Standard (${item.fuel})</option>
                   <option value="custom_png">Commercial PNG Pipeline Fitting</option>
                   <option value="custom_elec">Electric Heavy Heating Elements</option>
@@ -1977,11 +1977,11 @@ function openSpecModal(id) {
               <div style="margin-bottom: 1.2rem;">
                 <label style="font-size: 0.82rem; font-weight: 700; color: #0f172a;">Custom Options / Add-ons:</label>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; margin-top: 0.3rem;">
-                  <label style="font-size: 0.78rem; display: flex; align-items: center; gap: 0.3rem;">
-                    <input type="checkbox" id="addWheels" value="2500"> Lockable Castor Wheels (+₹2,500)
+                  <label for="addWheels" style="font-size: 0.78rem; display: flex; align-items: center; gap: 0.3rem;">
+                    <input type="checkbox" id="addWheels" value="2500" aria-label="Lockable Castor Wheels"> Lockable Castor Wheels (+₹2,500)
                   </label>
-                  <label style="font-size: 0.78rem; display: flex; align-items: center; gap: 0.3rem;">
-                    <input type="checkbox" id="addShelf" value="3500"> Overhead SS Shelf (+₹3,500)
+                  <label for="addShelf" style="font-size: 0.78rem; display: flex; align-items: center; gap: 0.3rem;">
+                    <input type="checkbox" id="addShelf" value="3500" aria-label="Overhead SS Shelf"> Overhead SS Shelf (+₹3,500)
                   </label>
                 </div>
               </div>

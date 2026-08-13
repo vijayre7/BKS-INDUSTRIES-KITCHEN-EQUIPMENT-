@@ -382,7 +382,8 @@
     <div class="catalog-controls">
       <div class="search-box">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="catalogSearch" placeholder="Search 70+ items (e.g. Work Table, Single Sink, Continental Range, Deck Oven, Bain Marie)...">
+        <label for="catalogSearch" class="visually-hidden">Search Catalog</label>
+        <input type="text" id="catalogSearch" placeholder="Search 70+ items (e.g. Work Table, Single Sink, Continental Range, Deck Oven, Bain Marie)..." aria-label="Search 70+ equipment items catalog">
       </div>
 
       <div class="category-tabs">
@@ -422,8 +423,8 @@
         </div>
 
         <div class="planner-dimensions-inputs">
-          <label>Room Width (ft): <input type="number" id="plannerWidthInput" value="24" min="10" max="60"></label>
-          <label>Room Length (ft): <input type="number" id="plannerLengthInput" value="18" min="10" max="60"></label>
+          <label for="plannerWidthInput">Room Width (ft): <input type="number" id="plannerWidthInput" value="24" min="10" max="60" aria-label="Room Width in Feet"></label>
+          <label for="plannerLengthInput">Room Length (ft): <input type="number" id="plannerLengthInput" value="18" min="10" max="60" aria-label="Room Length in Feet"></label>
         </div>
       </div>
 
@@ -513,34 +514,34 @@
           <span>2</span> Kitchen Carpet Area (Sq. Ft.)
         </div>
         <div class="size-slider-wrap">
-          <div class="size-labels">
+          <label for="kitchenSizeSlider" class="size-labels">
             <span>Carpet Area:</span>
             <span id="sizeSqFtVal" style="color: var(--primary); font-weight: 800;">400 sq. ft.</span>
-          </div>
-          <input type="range" id="kitchenSizeSlider" class="range-slider" min="200" max="2000" step="50" value="400">
+          </label>
+          <input type="range" id="kitchenSizeSlider" class="range-slider" min="200" max="2000" step="50" value="400" aria-label="Kitchen Carpet Area in Square Feet">
         </div>
 
         <div class="config-step-title">
           <span>3</span> Select Required Equipment Packages
         </div>
         <div class="modules-checklist">
-          <label class="module-checkbox">
-            <input type="checkbox" value="cooking" checked> Cooking Ranges & Burners
+          <label class="module-checkbox" for="chk-cooking">
+            <input type="checkbox" id="chk-cooking" value="cooking" checked aria-label="Cooking Ranges and Burners"> Cooking Ranges & Burners
           </label>
-          <label class="module-checkbox">
-            <input type="checkbox" value="prep" checked> SS Prep Tables & Sinks
+          <label class="module-checkbox" for="chk-prep">
+            <input type="checkbox" id="chk-prep" value="prep" checked aria-label="Stainless Steel Prep Tables and Sinks"> SS Prep Tables & Sinks
           </label>
-          <label class="module-checkbox">
-            <input type="checkbox" value="exhaust" checked> Exhaust Hood & Ducting
+          <label class="module-checkbox" for="chk-exhaust">
+            <input type="checkbox" id="chk-exhaust" value="exhaust" checked aria-label="Exhaust Hood and Ducting"> Exhaust Hood & Ducting
           </label>
-          <label class="module-checkbox">
-            <input type="checkbox" value="warming"> Bain Marie Food Warmers
+          <label class="module-checkbox" for="chk-warming">
+            <input type="checkbox" id="chk-warming" value="warming" aria-label="Bain Marie Food Warmers"> Bain Marie Food Warmers
           </label>
-          <label class="module-checkbox">
-            <input type="checkbox" value="storage"> Multi-Tier Storage Racks
+          <label class="module-checkbox" for="chk-storage">
+            <input type="checkbox" id="chk-storage" value="storage" aria-label="Multi-Tier Storage Racks"> Multi-Tier Storage Racks
           </label>
-          <label class="module-checkbox">
-            <input type="checkbox" value="conveyor"> Custom SS Trolleys
+          <label class="module-checkbox" for="chk-conveyor">
+            <input type="checkbox" id="chk-conveyor" value="conveyor" aria-label="Custom Stainless Steel Trolleys"> Custom SS Trolleys
           </label>
         </div>
       </div>
@@ -584,16 +585,16 @@
         </div>
         <form id="cfmCalcForm" class="calc-form">
           <div class="form-group">
-            <label>Hood Length (Feet):</label>
-            <input type="number" id="cfmLength" class="form-control" value="8" min="3" max="25">
+            <label for="cfmLength">Hood Length (Feet):</label>
+            <input type="number" id="cfmLength" class="form-control" value="8" min="3" max="25" aria-label="Hood Length in Feet">
           </div>
           <div class="form-group">
-            <label>Hood Depth (Feet):</label>
-            <input type="number" id="cfmDepth" class="form-control" value="3.5" step="0.5" min="2" max="6">
+            <label for="cfmDepth">Hood Depth (Feet):</label>
+            <input type="number" id="cfmDepth" class="form-control" value="3.5" step="0.5" min="2" max="6" aria-label="Hood Depth in Feet">
           </div>
           <div class="form-group">
-            <label>Cooking Equipment Type:</label>
-            <select id="cfmCookingType" class="form-control">
+            <label for="cfmCookingType">Cooking Equipment Type:</label>
+            <select id="cfmCookingType" class="form-control" aria-label="Cooking Equipment Type">
               <option value="250">Light Duty (Prep, Steamers, Kettles)</option>
               <option value="350" selected>Medium Duty (Commercial Burners, Fryers, Tawa)</option>
               <option value="450">Heavy Duty (Charcoal, High Flame Wok, Tandoor)</option>
@@ -625,12 +626,12 @@
         </div>
         <form id="lpgCalcForm" class="calc-form">
           <div class="form-group">
-            <label>Number of High Pressure Burners:</label>
-            <input type="number" id="lpgBurners" class="form-control" value="4" min="1" max="20">
+            <label for="lpgBurners">Number of High Pressure Burners:</label>
+            <input type="number" id="lpgBurners" class="form-control" value="4" min="1" max="20" aria-label="Number of High Pressure Burners">
           </div>
           <div class="form-group">
-            <label>Daily Kitchen Operating Hours:</label>
-            <input type="number" id="lpgHours" class="form-control" value="10" min="1" max="24">
+            <label for="lpgHours">Daily Kitchen Operating Hours:</label>
+            <input type="number" id="lpgHours" class="form-control" value="10" min="1" max="24" aria-label="Daily Kitchen Operating Hours">
           </div>
         </form>
 
@@ -979,19 +980,19 @@
         <form id="contactForm">
           <div class="form-group">
             <label for="contactName">Your Name *</label>
-            <input type="text" id="contactName" class="form-control" placeholder="e.g. Vijay" required>
+            <input type="text" id="contactName" class="form-control" placeholder="e.g. Vijay" required aria-label="Your Name">
           </div>
           <div class="form-group">
             <label for="contactEmail">Your Email Address *</label>
-            <input type="email" id="contactEmail" class="form-control" placeholder="e.g. vijay@example.com" required>
+            <input type="email" id="contactEmail" class="form-control" placeholder="e.g. vijay@example.com" required aria-label="Your Email Address">
           </div>
           <div class="form-group">
             <label for="contactPhone">Phone / WhatsApp Number *</label>
-            <input type="tel" id="contactPhone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+            <input type="tel" id="contactPhone" class="form-control" placeholder="e.g. +91 98765 43210" required aria-label="Phone or WhatsApp Number">
           </div>
           <div class="form-group">
             <label for="contactKitchenType">Business Type</label>
-            <select id="contactKitchenType" class="form-control">
+            <select id="contactKitchenType" class="form-control" aria-label="Business Type">
               <option value="Restaurant">Restaurant / Fine Dining</option>
               <option value="Cloud Kitchen">Cloud Kitchen / Delivery Hub</option>
               <option value="Hotel / Resort">Hotel / Banquet Hall</option>
@@ -1001,7 +1002,7 @@
           </div>
           <div class="form-group">
             <label for="contactMsg">Equipment Needed / Message</label>
-            <textarea id="contactMsg" class="form-control" rows="4" placeholder="Describe the kitchen equipment or dimensions you need..."></textarea>
+            <textarea id="contactMsg" class="form-control" rows="4" placeholder="Describe the kitchen equipment or dimensions you need..." aria-label="Equipment Needed or Message"></textarea>
           </div>
           <div style="display: flex; flex-direction: column; gap: 0.6rem;">
             <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;">

@@ -1,6 +1,18 @@
 /* BKS Industries - Ultra-Modern Glassmorphism Commercial Kitchen Design System */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
 :root {
   --bg-main: #080c14;
   --bg-card: rgba(13, 27, 42, 0.75);
