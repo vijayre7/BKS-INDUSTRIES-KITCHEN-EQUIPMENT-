@@ -1269,8 +1269,32 @@ let plannerState = {
   placedItems: []
 };
 
+// Clean srsltid, gclid, and auto-tagging tracking parameters from URL for clean canonical sharing
+function cleanTrackingParameters() {
+  try {
+    const url = new URL(window.location.href);
+    const paramsToClean = ['srsltid', 'gclid', 'fbclid', 'msclkid'];
+    let modified = false;
+
+    paramsToClean.forEach(param => {
+      if (url.searchParams.has(param)) {
+        url.searchParams.delete(param);
+        modified = true;
+      }
+    });
+
+    if (modified) {
+      const cleanPath = url.pathname + (url.searchParams.toString() ? '?' + url.searchParams.toString() : '') + url.hash;
+      window.history.replaceState(null, '', cleanPath);
+    }
+  } catch (err) {
+    // Silent fallback
+  }
+}
+
 // DOM Initializer (Chunked to eliminate long main-thread tasks)
 document.addEventListener('DOMContentLoaded', () => {
+  cleanTrackingParameters();
   setupEventListeners();
   renderCatalog();
 
