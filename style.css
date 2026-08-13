@@ -1,5 +1,10 @@
 /* BKS Industries - Ultra-Modern Glassmorphism Commercial Kitchen Design System */
 
+@font-face {
+  font-family: 'FontAwesome';
+  font-display: swap;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

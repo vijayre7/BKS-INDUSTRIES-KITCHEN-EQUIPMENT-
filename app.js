@@ -1317,16 +1317,23 @@ function showToast(message, type = 'success') {
 
 // Global Event Listeners
 function setupEventListeners() {
-  // Scroll listener for header glass effect elevation
+  // Scroll listener for header glass effect elevation (Optimized for zero forced reflow)
   const navbar = document.querySelector('.navbar');
   if (navbar) {
+    let ticking = false;
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) {
-        navbar.classList.add('navbar-scrolled');
-      } else {
-        navbar.classList.remove('navbar-scrolled');
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 20) {
+            navbar.classList.add('navbar-scrolled');
+          } else {
+            navbar.classList.remove('navbar-scrolled');
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
-    });
+    }, { passive: true });
   }
 
   // Mobile Nav Drawer Toggle
