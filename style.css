@@ -901,11 +901,27 @@ button {
   top: 1rem;
   left: 1rem;
   background: var(--accent);
-  color: #ffffff;
+  color: #0f172a;
   padding: 0.25rem 0.7rem;
   border-radius: var(--radius-full);
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
+}
+
+.gallery-card p {
+  color: #475569 !important;
+}
+
+.gallery-card .btn-outline {
+  color: #0f172a !important;
+  background: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+}
+
+.gallery-card .btn-outline:hover {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  border-color: #0284c7 !important;
 }
 
 .blog-body {
