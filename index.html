@@ -303,9 +303,12 @@
       <li><a href="#reviews" class="mobile-nav-link"><i class="fa-solid fa-star"></i> Verified Google Reviews</a></li>
       <li><a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Factory Contact & Map</a></li>
     </ul>
-    <div style="padding: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: auto;">
-      <a href="tel:+918123939433" class="btn btn-primary" style="width: 100%; text-align: center;">
+    <div style="padding: 1.25rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: auto; display: flex; flex-direction: column; gap: 0.6rem;">
+      <a href="tel:+918123939433" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">
         <i class="fa-solid fa-phone"></i> Call +91 81239 39433
+      </a>
+      <a href="tel:+919880131901" class="btn btn-outline" style="width: 100%; text-align: center; justify-content: center; color: #ffffff; border-color: rgba(255,255,255,0.3);">
+        <i class="fa-solid fa-phone"></i> Call +91 98801 31901
       </a>
     </div>
   </div>
@@ -359,7 +362,7 @@
 
       <div class="hero-media-wrapper">
         <div class="hero-image-card">
-          <img src="images/hero.webp" alt="Commercial Kitchen Setup and Stainless Steel Machinery Fabrication - BKS Industries Bengaluru" width="600" height="400" fetchpriority="high" loading="eager" decoding="async">
+          <img src="images/hero.webp" srcset="images/hero-sm.webp 450w, images/hero.webp 800w" sizes="(max-width: 600px) 100vw, 600px" alt="Commercial Kitchen Setup and Stainless Steel Machinery Fabrication - BKS Industries Bengaluru" width="600" height="400" fetchpriority="high" loading="eager" decoding="async">
         </div>
         <div class="floating-glass-card float-rating">
           <div style="background: rgba(245,158,11,0.2); color: #f59e0b; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
@@ -670,141 +673,178 @@
   </section>
 
   <!-- Actual Project Installation Gallery -->
-  <section id="gallery" class="section" style="background: var(--bg-light); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+  <section id="gallery" class="section gmb-gallery-section">
     <div class="section-header">
-      <span class="section-subtitle">Real Factory & Client Installations</span>
+      <span class="section-subtitle"><i class="fa-brands fa-google" style="color: #4285F4; margin-right: 0.4rem;"></i> Google Business Profile Photos</span>
       <h2 class="section-title">SS Fabricators Bangalore — Factory Installations</h2>
       <p class="section-desc">Browse live installation photos of completed commercial kitchens, SS 304 fabrication projects, and heavy machinery built by BKS Industries in Bengaluru.</p>
     </div>
 
-    <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto 2.5rem; padding: 0 1rem;">
+    <!-- Optional Widget Embed Container (Method 1: Ready for Elfsight / Tagembed auto-sync) -->
+    <div id="gmb-widget-section" class="gmb-widget-wrapper" style="display: none;">
+      <div id="gmb-widget-container" class="gmb-widget-container">
+        <!-- Paste Third-Party Widget Script / iFrame Here (e.g. Elfsight / Tagembed) -->
+      </div>
+    </div>
+
+    <!-- Live Gallery Grid (Method 2: Interactive Lightbox Preview + Direct GMB Links) -->
+    <div class="gmb-gallery-grid" id="gmbGalleryGrid">
       
       <!-- Gallery Card 1 -->
-      <div class="gallery-card" style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-        <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" style="display: block; height: 220px; overflow: hidden; position: relative;" title="Click to view live photo on Google My Business">
-          <img src="images/installation_cloud_kitchen.webp" alt="Cloud Kitchen Stainless Steel Equipment Installation Bangalore - BKS Industries" width="400" height="280" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
-          <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); color: #38bdf8; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-            <i class="fa-solid fa-camera"></i> Google Live Photo
+      <div class="gmb-card">
+        <div class="gmb-img-wrap" onclick="openGmbLightbox(0)" role="button" tabindex="0" aria-label="Expand Cloud Kitchen Setup photo">
+          <img src="images/installation_cloud_kitchen.webp" alt="Cloud Kitchen Stainless Steel Equipment Installation Bangalore - BKS Industries" width="400" height="280" loading="lazy" decoding="async">
+          <span class="gmb-badge">
+            <i class="fa-brands fa-google" style="color: #4285F4;"></i> Live GMB Photo
           </span>
-        </a>
-        <div style="padding: 1.2rem;">
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--bg-dark); margin-bottom: 0.4rem;">Cloud Kitchen Setup — Electronic City</h3>
-          <p style="font-size: 0.85rem; color: #475569; margin-bottom: 1rem;">Complete SS work tables, 4-burner gas ranges, and custom exhaust hood installation.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" class="btn btn-outline" style="width: 100%; padding: 0.55rem; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; border-color: var(--border-color);">
-            <i class="fa-brands fa-google" style="color: #4285F4;"></i> Open in Google My Business <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+          <div class="gmb-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i> Click to Expand
+          </div>
+        </div>
+        <div class="gmb-card-body">
+          <h3 class="gmb-card-title">Cloud Kitchen Setup — Electronic City</h3>
+          <p class="gmb-card-desc">Complete SS 304 work tables, 4-burner gas ranges, and custom exhaust hood installation.</p>
+          <span class="gmb-card-loc"><i class="fa-solid fa-location-dot"></i> Electronic City, Bengaluru</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-gmb-direct">
+            <i class="fa-brands fa-google" style="color: #4285F4;"></i> View Live Photo on Google <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
           </a>
         </div>
       </div>
 
       <!-- Gallery Card 2 -->
-      <div class="gallery-card" style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-        <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" style="display: block; height: 220px; overflow: hidden; position: relative;" title="Click to view live photo on Google My Business">
-          <img src="images/installation_dosa_bhatti.webp" alt="Live Cooking Dosa Counter Installation Bangalore - BKS Industries" width="400" height="280" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
-          <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); color: #38bdf8; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-            <i class="fa-solid fa-camera"></i> Google Live Photo
+      <div class="gmb-card">
+        <div class="gmb-img-wrap" onclick="openGmbLightbox(1)" role="button" tabindex="0" aria-label="Expand Live Dosa Counter photo">
+          <img src="images/installation_dosa_bhatti.webp" alt="Live Cooking Dosa Counter Installation Bangalore - BKS Industries" width="400" height="280" loading="lazy" decoding="async">
+          <span class="gmb-badge">
+            <i class="fa-brands fa-google" style="color: #4285F4;"></i> Live GMB Photo
           </span>
-        </a>
-        <div style="padding: 1.2rem;">
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--bg-dark); margin-bottom: 0.4rem;">Live Dosa & Cooking Counter — Rajajinagar</h3>
-          <p style="font-size: 0.85rem; color: #475569; margin-bottom: 1rem;">16mm polished steel Dosa Bhatti tawa paired with glass guard Bain Marie food warmers.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" class="btn btn-outline" style="width: 100%; padding: 0.55rem; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; border-color: var(--border-color);">
-            <i class="fa-brands fa-google" style="color: #4285F4;"></i> Open in Google My Business <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+          <div class="gmb-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i> Click to Expand
+          </div>
+        </div>
+        <div class="gmb-card-body">
+          <h3 class="gmb-card-title">Live Dosa & Cooking Counter — Rajajinagar</h3>
+          <p class="gmb-card-desc">16mm polished steel Dosa Bhatti tawa paired with glass guard Bain Marie food warmers.</p>
+          <span class="gmb-card-loc"><i class="fa-solid fa-location-dot"></i> Rajajinagar, Bengaluru</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-gmb-direct">
+            <i class="fa-brands fa-google" style="color: #4285F4;"></i> View Live Photo on Google <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
           </a>
         </div>
       </div>
 
       <!-- Gallery Card 3 -->
-      <div class="gallery-card" style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-        <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" style="display: block; height: 220px; overflow: hidden; position: relative;" title="Click to view live photo on Google My Business">
-          <img src="images/installation_bakery.webp" alt="Industrial Bakery Unit Setup & Machinery Installation Bangalore - BKS Industries" width="400" height="280" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
-          <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); color: #38bdf8; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-            <i class="fa-solid fa-camera"></i> Google Live Photo
+      <div class="gmb-card">
+        <div class="gmb-img-wrap" onclick="openGmbLightbox(2)" role="button" tabindex="0" aria-label="Expand Commercial Bakery Setup photo">
+          <img src="images/installation_bakery.webp" alt="Industrial Bakery Unit Setup & Machinery Installation Bangalore - BKS Industries" width="400" height="280" loading="lazy" decoding="async">
+          <span class="gmb-badge">
+            <i class="fa-brands fa-google" style="color: #4285F4;"></i> Live GMB Photo
           </span>
-        </a>
-        <div style="padding: 1.2rem;">
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--bg-dark); margin-bottom: 0.4rem;">Commercial Bakery Setup — Yeshwanthpur</h3>
-          <p style="font-size: 0.85rem; color: #475569; margin-bottom: 1rem;">Heavy-duty 3-deck stone baking ovens and 50kg spiral dough kneader machinery line.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" class="btn btn-outline" style="width: 100%; padding: 0.55rem; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; border-color: var(--border-color);">
-            <i class="fa-brands fa-google" style="color: #4285F4;"></i> Open in Google My Business <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+          <div class="gmb-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i> Click to Expand
+          </div>
+        </div>
+        <div class="gmb-card-body">
+          <h3 class="gmb-card-title">Commercial Bakery Setup — Yeshwanthpur</h3>
+          <p class="gmb-card-desc">Heavy-duty 3-deck stone baking ovens and 50kg spiral dough kneader machinery line.</p>
+          <span class="gmb-card-loc"><i class="fa-solid fa-location-dot"></i> Yeshwanthpur, Bengaluru</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-gmb-direct">
+            <i class="fa-brands fa-google" style="color: #4285F4;"></i> View Live Photo on Google <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
           </a>
         </div>
       </div>
 
       <!-- Gallery Card 4 -->
-      <div class="gallery-card" style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-        <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" style="display: block; height: 220px; overflow: hidden; position: relative;" title="Click to view live photo on Google My Business">
-          <img src="images/exhaust_hood.webp" alt="Commercial Kitchen Exhaust Hood Ventilation Installation Bangalore - BKS Industries" width="400" height="280" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
-          <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); color: #38bdf8; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-            <i class="fa-solid fa-camera"></i> Google Live Photo
+      <div class="gmb-card">
+        <div class="gmb-img-wrap" onclick="openGmbLightbox(3)" role="button" tabindex="0" aria-label="Expand Exhaust Hood photo">
+          <img src="images/exhaust_hood.webp" alt="Commercial Kitchen Exhaust Hood Ventilation Installation Bangalore - BKS Industries" width="400" height="280" loading="lazy" decoding="async">
+          <span class="gmb-badge">
+            <i class="fa-brands fa-google" style="color: #4285F4;"></i> Live GMB Photo
           </span>
-        </a>
-        <div style="padding: 1.2rem;">
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--bg-dark); margin-bottom: 0.4rem;">Exhaust Hood & GI Ducting — Whitefield</h3>
-          <p style="font-size: 0.85rem; color: #475569; margin-bottom: 1rem;">SS wall-mounted baffle filter exhaust hood paired with high static centrifugal blower.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" class="btn btn-outline" style="width: 100%; padding: 0.55rem; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; border-color: var(--border-color);">
-            <i class="fa-brands fa-google" style="color: #4285F4;"></i> Open in Google My Business <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+          <div class="gmb-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i> Click to Expand
+          </div>
+        </div>
+        <div class="gmb-card-body">
+          <h3 class="gmb-card-title">Exhaust Hood & GI Ducting — Whitefield</h3>
+          <p class="gmb-card-desc">SS wall-mounted baffle filter exhaust hood paired with high static centrifugal blower.</p>
+          <span class="gmb-card-loc"><i class="fa-solid fa-location-dot"></i> Whitefield, Bengaluru</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-gmb-direct">
+            <i class="fa-brands fa-google" style="color: #4285F4;"></i> View Live Photo on Google <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
           </a>
         </div>
       </div>
 
       <!-- Gallery Card 5 -->
-      <div class="gallery-card" style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-        <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" style="display: block; height: 220px; overflow: hidden; position: relative;" title="Click to view live photo on Google My Business">
-          <img src="images/vertical_chiller.webp" alt="Commercial Refrigeration Cold Line & Vertical Chiller Installation Bangalore - BKS Industries" width="400" height="280" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
-          <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); color: #38bdf8; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-            <i class="fa-solid fa-camera"></i> Google Live Photo
+      <div class="gmb-card">
+        <div class="gmb-img-wrap" onclick="openGmbLightbox(4)" role="button" tabindex="0" aria-label="Expand Commercial Refrigeration photo">
+          <img src="images/vertical_chiller.webp" alt="Commercial Refrigeration Cold Line & Vertical Chiller Installation Bangalore - BKS Industries" width="400" height="280" loading="lazy" decoding="async">
+          <span class="gmb-badge">
+            <i class="fa-brands fa-google" style="color: #4285F4;"></i> Live GMB Photo
           </span>
-        </a>
-        <div style="padding: 1.2rem;">
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--bg-dark); margin-bottom: 0.4rem;">Refrigeration Cold Storage — Indiranagar</h3>
-          <p style="font-size: 0.85rem; color: #475569; margin-bottom: 1rem;">Vertical 4-door SS 304 reach-in refrigerators and under-counter chilled prep tables.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" class="btn btn-outline" style="width: 100%; padding: 0.55rem; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; border-color: var(--border-color);">
-            <i class="fa-brands fa-google" style="color: #4285F4;"></i> Open in Google My Business <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+          <div class="gmb-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i> Click to Expand
+          </div>
+        </div>
+        <div class="gmb-card-body">
+          <h3 class="gmb-card-title">Refrigeration Cold Storage — Indiranagar</h3>
+          <p class="gmb-card-desc">Vertical 4-door SS 304 reach-in refrigerators and under-counter chilled prep tables.</p>
+          <span class="gmb-card-loc"><i class="fa-solid fa-location-dot"></i> Indiranagar, Bengaluru</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-gmb-direct">
+            <i class="fa-brands fa-google" style="color: #4285F4;"></i> View Live Photo on Google <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
           </a>
         </div>
       </div>
 
       <!-- Gallery Card 6 -->
-      <div class="gallery-card" style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-        <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" style="display: block; height: 220px; overflow: hidden; position: relative;" title="Click to view live photo on Google My Business">
-          <img src="images/sink_unit.webp" alt="Heavy Duty Pot Wash Sink Unit Sanitation Line Installation Bangalore - BKS Industries" width="400" height="280" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
-          <span style="position: absolute; top: 12px; right: 12px; background: rgba(15, 23, 42, 0.85); color: #38bdf8; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
-            <i class="fa-solid fa-camera"></i> Google Live Photo
+      <div class="gmb-card">
+        <div class="gmb-img-wrap" onclick="openGmbLightbox(5)" role="button" tabindex="0" aria-label="Expand Pot Wash Sanitation Line photo">
+          <img src="images/sink_unit.webp" srcset="images/sink_unit-sm.webp 380w, images/sink_unit.webp 640w" sizes="(max-width: 600px) 100vw, 400px" alt="Heavy Duty Pot Wash Sink Unit Sanitation Line Installation Bangalore - BKS Industries" width="400" height="280" loading="lazy" decoding="async">
+          <span class="gmb-badge">
+            <i class="fa-brands fa-google" style="color: #4285F4;"></i> Live GMB Photo
           </span>
-        </a>
-        <div style="padding: 1.2rem;">
-          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--bg-dark); margin-bottom: 0.4rem;">Pot Wash & Sanitation Line — Peenya</h3>
-          <p style="font-size: 0.85rem; color: #475569; margin-bottom: 1rem;">Triple bowl SS 304 wash-rinse-sanitize sink units and heavy pre-rinse spring shower taps.</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" class="btn btn-outline" style="width: 100%; padding: 0.55rem; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; border-color: var(--border-color);">
-            <i class="fa-brands fa-google" style="color: #4285F4;"></i> Open in Google My Business <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+          <div class="gmb-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i> Click to Expand
+          </div>
+        </div>
+        <div class="gmb-card-body">
+          <h3 class="gmb-card-title">Pot Wash & Sanitation Line — Peenya</h3>
+          <p class="gmb-card-desc">Triple bowl SS 304 wash-rinse-sanitize sink units and heavy pre-rinse spring shower taps.</p>
+          <span class="gmb-card-loc"><i class="fa-solid fa-location-dot"></i> Peenya Industrial Area, Bengaluru</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-gmb-direct">
+            <i class="fa-brands fa-google" style="color: #4285F4;"></i> View Live Photo on Google <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
           </a>
         </div>
       </div>
 
     </div>
+  </section>
 
-    <!-- Google My Business Live Photo Callout Banner -->
-    <div style="max-width: 1200px; margin: 0 auto; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 2rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: var(--shadow-lg);">
-      <div style="display: flex; align-items: center; gap: 1.2rem;">
-        <div style="width: 56px; height: 56px; border-radius: 14px; background: rgba(66, 133, 244, 0.15); border: 1px solid rgba(66, 133, 244, 0.3); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #4285F4; flex-shrink: 0;">
-          <i class="fa-brands fa-google"></i>
-        </div>
-        <div>
-          <h3 style="color: #ffffff; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.2rem;">BKS Industries Google My Business Live Photos</h3>
-          <p style="color: #94a3b8; font-size: 0.9rem; margin: 0;">Explore 100+ verified customer project photos, factory floor machinery, and client installations on Google Maps.</p>
-        </div>
+  <!-- Interactive Lightbox Modal for GMB Gallery -->
+  <div id="gmbLightbox" class="gmb-lightbox-modal" aria-hidden="true" role="dialog" aria-label="Installation Photo Lightbox">
+    <div class="gmb-lightbox-content">
+      <button class="gmb-lightbox-close" onclick="closeGmbLightbox()" aria-label="Close Lightbox Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button class="gmb-lightbox-nav gmb-lightbox-prev" onclick="changeGmbSlide(-1)" aria-label="Previous Photo">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="gmb-lightbox-nav gmb-lightbox-next" onclick="changeGmbSlide(1)" aria-label="Next Photo">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+      <div class="gmb-lightbox-img-wrap">
+        <img id="gmbLightboxImg" src="" alt="Live GMB Installation Photo">
       </div>
-
-      <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-        <a href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" class="btn btn-primary" style="padding: 0.8rem 1.4rem; font-size: 0.95rem;">
-          <i class="fa-solid fa-images"></i> View Live Google Photos
-        </a>
-        <a href="https://maps.google.com/maps?q=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" class="btn btn-outline" style="color: #ffffff; border-color: rgba(255,255,255,0.3); padding: 0.8rem 1.4rem; font-size: 0.95rem;">
-          <i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> Get Factory Directions
+      <div class="gmb-lightbox-caption">
+        <div class="gmb-lightbox-text">
+          <h4 id="gmbLightboxTitle">Factory Installation</h4>
+          <p id="gmbLightboxDesc">Bengaluru • Stainless Steel Equipment</p>
+        </div>
+        <a id="gmbLightboxGmbLink" href="https://www.google.com/maps/search/?api=1&query=BKS+Industries+Lakshmidevinagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-gmb-modal">
+          <i class="fa-brands fa-google"></i> View Live Photo on Google My Business <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
         </a>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Commercial Kitchen Blog & Knowledge Hub -->
   <section id="blogs" class="section">
@@ -829,13 +869,13 @@
 
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="images/hero.webp" alt="Turnkey Commercial Kitchen Setup Bangalore - BKS Industries" width="380" height="250" loading="lazy" decoding="async">
+        <img src="images/hero.webp" srcset="images/hero-sm.webp 450w, images/hero.webp 800w" sizes="(max-width: 600px) 100vw, 380px" alt="Turnkey Commercial Kitchen Setup Bangalore - BKS Industries" width="380" height="250" loading="lazy" decoding="async">
         <div class="gallery-overlay">
           <div class="gallery-title">Hotel Kitchen Turnkey Setup</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/prep_table.webp" alt="SS 304 Commercial Preparation Work Table & Sink Unit Bengaluru - BKS Industries" width="380" height="250" loading="lazy" decoding="async">
+        <img src="images/prep_table.webp" srcset="images/prep_table-sm.webp 380w, images/prep_table.webp 640w" sizes="(max-width: 600px) 100vw, 380px" alt="SS 304 Commercial Preparation Work Table & Sink Unit Bengaluru - BKS Industries" width="380" height="250" loading="lazy" decoding="async">
         <div class="gallery-overlay">
           <div class="gallery-title">SS 304 Work Table & Sink</div>
         </div>
@@ -871,7 +911,7 @@
         </div>
       </div>
       <div class="gallery-item">
-        <img src="images/baking_oven.webp" alt="Commercial Pizza & Deck Baking Oven Equipment Bangalore - BKS Industries" width="380" height="250" loading="lazy" decoding="async">
+        <img src="images/baking_oven.webp" srcset="images/baking_oven-sm.webp 380w, images/baking_oven.webp 640w" sizes="(max-width: 600px) 100vw, 380px" alt="Commercial Pizza & Deck Baking Oven Equipment Bangalore - BKS Industries" width="380" height="250" loading="lazy" decoding="async">
         <div class="gallery-overlay">
           <div class="gallery-title">Pizza & Bakery Deck Oven</div>
         </div>
@@ -951,8 +991,10 @@
           <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
           <div class="info-details">
             <h4>Call / WhatsApp Us</h4>
-            <p><a href="tel:+918123939433" style="color: var(--accent); font-weight: 700; font-size: 0.8rem;">+91 81239 39433</a></p>
-            <p><a href="tel:+919880131901" style="color: var(--accent); font-weight: 700; font-size: 0.8rem;">+91 98801 31901</a></p>
+            <div class="contact-phone-list">
+              <a href="tel:+918123939433" class="contact-phone-badge"><i class="fa-solid fa-phone"></i> +91 81239 39433</a>
+              <a href="tel:+919880131901" class="contact-phone-badge"><i class="fa-solid fa-phone"></i> +91 98801 31901</a>
+            </div>
           </div>
         </div>
 
@@ -961,10 +1003,10 @@
           <div class="info-details">
             <h4>Official Contact Emails</h4>
             <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.4rem;">
-              <a href="mailto:Bks-industries@outlook.com" style="color: #cbd5e1; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.8rem; background: rgba(255,255,255,0.06); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); width: fit-content; min-height: 38px; font-weight: 600; font-size: 0.85rem;">
+              <a href="mailto:Bks-industries@outlook.com" style="color: #cbd5e1; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.45rem 0.8rem; background: rgba(255,255,255,0.06); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); width: fit-content; max-width: 100%; min-height: 38px; font-weight: 600; font-size: 0.85rem; word-break: break-all;">
                 <i class="fa-solid fa-envelope" style="color: var(--accent);"></i> Bks-industries@outlook.com
               </a>
-              <a href="mailto:Bksindustries23@gmail.com" style="color: #cbd5e1; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.8rem; background: rgba(255,255,255,0.06); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); width: fit-content; min-height: 38px; font-weight: 600; font-size: 0.85rem;">
+              <a href="mailto:Bksindustries23@gmail.com" style="color: #cbd5e1; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.45rem 0.8rem; background: rgba(255,255,255,0.06); border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); width: fit-content; max-width: 100%; min-height: 38px; font-weight: 600; font-size: 0.85rem; word-break: break-all;">
                 <i class="fa-solid fa-envelope" style="color: var(--accent);"></i> Bksindustries23@gmail.com
               </a>
             </div>
@@ -1010,7 +1052,12 @@
           </div>
           <div class="form-group">
             <label for="contactPhone">Phone / WhatsApp Number *</label>
-            <input type="tel" id="contactPhone" class="form-control" placeholder="e.g. +91 98765 43210" required aria-label="Phone or WhatsApp Number">
+            <div class="phone-input-group">
+              <div class="phone-input-prefix">
+                <i class="fa-solid fa-phone"></i> +91
+              </div>
+              <input type="tel" id="contactPhone" class="form-control" placeholder="81239 39433" required aria-label="Phone or WhatsApp Number">
+            </div>
           </div>
           <div class="form-group">
             <label for="contactKitchenType">Business Type</label>
@@ -1135,7 +1182,7 @@
     </div>
 
     <div class="drawer-footer">
-      <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--bg-dark);">
+      <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.8rem; color: #ffffff;">
         <span>Estimated Total:</span>
         <span id="drawerSubtotal" style="color: var(--accent-hover);">₹0</span>
       </div>

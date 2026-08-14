@@ -1475,10 +1475,10 @@ function renderCatalog() {
 
   if (filtered.length === 0) {
     container.innerHTML = `
-      <div style="grid-column: 1/-1; text-align: center; padding: 3.5rem 1.5rem; background: #ffffff; border-radius: 20px; border: 1px dashed var(--steel-border);">
-        <i class="fa-solid fa-store-slash" style="font-size: 3rem; color: #94a3b8; margin-bottom: 1rem;"></i>
-        <h3 style="font-size: 1.3rem; color: #0f172a; font-weight: 700;">No equipment found matching criteria</h3>
-        <p style="color: #64748b; font-size: 0.95rem; margin-top: 0.3rem;">Try broadening your category filter or search terms.</p>
+      <div style="grid-column: 1/-1; text-align: center; padding: 3.5rem 1.5rem; background: var(--bg-card); border-radius: 20px; border: 1px dashed var(--steel-border);">
+        <i class="fa-solid fa-store-slash" style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem;"></i>
+        <h3 style="font-size: 1.3rem; color: #ffffff; font-weight: 700;">No equipment found matching criteria</h3>
+        <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 0.3rem;">Try broadening your category filter or search terms.</p>
       </div>
     `;
     return;
@@ -1653,17 +1653,17 @@ function updateCartUI() {
     const itemTotal = item.priceValue * item.qty;
     totalCost += itemTotal;
     return `
-      <div style="display: flex; gap: 0.8rem; align-items: center; padding: 0.9rem 0; border-bottom: 1px solid #e2e8f0;">
-        <img src="${item.image}" alt="${item.name} - Commercial Kitchen Equipment BKS Industries Bangalore" style="width: 56px; height: 56px; border-radius: 10px; object-fit: cover; border: 1px solid #cbd5e1;" width="56" height="56" loading="lazy" decoding="async">
+      <div style="display: flex; gap: 0.8rem; align-items: center; padding: 0.9rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.12);">
+        <img src="${item.image}" alt="${item.name} - Commercial Kitchen Equipment BKS Industries Bangalore" style="width: 56px; height: 56px; border-radius: 10px; object-fit: cover; border: 1px solid rgba(255, 255, 255, 0.2);" width="56" height="56" loading="lazy" decoding="async">
         <div style="flex: 1; min-width: 0;">
-          <h4 style="font-size: 0.88rem; font-weight: 700; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.name}</h4>
-          ${item.notes ? `<p style="font-size: 0.72rem; color: #0284c7; font-weight: 600;">${item.notes}</p>` : ''}
+          <h4 style="font-size: 0.88rem; font-weight: 700; color: #ffffff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.name}</h4>
+          ${item.notes ? `<p style="font-size: 0.72rem; color: #38bdf8; font-weight: 600;">${item.notes}</p>` : ''}
           <span style="font-size: 0.82rem; color: var(--accent-hover); font-weight: 700;">${item.priceEstimate}</span>
         </div>
-        <div style="display: flex; align-items: center; gap: 0.4rem; background: #f1f5f9; padding: 0.25rem 0.5rem; border-radius: 6px;">
-          <button onclick="changeQty(${index}, -1)" style="background: none; font-size: 0.9rem; font-weight: 700; cursor: pointer; width: 20px;">-</button>
-          <span style="font-weight: 700; font-size: 0.85rem;">${item.qty}</span>
-          <button onclick="changeQty(${index}, 1)" style="background: none; font-size: 0.9rem; font-weight: 700; cursor: pointer; width: 20px;">+</button>
+        <div style="display: flex; align-items: center; gap: 0.4rem; background: rgba(255, 255, 255, 0.08); padding: 0.25rem 0.5rem; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.12);">
+          <button onclick="changeQty(${index}, -1)" style="background: none; border: none; color: #ffffff; font-size: 0.9rem; font-weight: 700; cursor: pointer; width: 20px;">-</button>
+          <span style="font-weight: 700; font-size: 0.85rem; color: #ffffff;">${item.qty}</span>
+          <button onclick="changeQty(${index}, 1)" style="background: none; border: none; color: #ffffff; font-size: 0.9rem; font-weight: 700; cursor: pointer; width: 20px;">+</button>
         </div>
         <button onclick="removeFromCart(${index})" style="color: #ef4444; background: none; border: none; font-size: 0.95rem; cursor: pointer; padding: 0.3rem;" title="Remove Item">
           <i class="fa-solid fa-trash-can"></i>
@@ -1968,12 +1968,12 @@ function openSpecModal(id) {
           </div>
 
           <div>
-            <h3 style="font-size: 1.35rem; color: #0f172a; margin-bottom: 0.4rem;">${item.name}</h3>
-            <p style="color: #64748b; font-size: 0.88rem; margin-bottom: 1rem; line-height: 1.4;">${item.desc}</p>
+            <h3 style="font-size: 1.35rem; color: #ffffff; margin-bottom: 0.4rem;">${item.name}</h3>
+            <p style="color: #cbd5e1; font-size: 0.88rem; margin-bottom: 1rem; line-height: 1.4;">${item.desc}</p>
             
             <form id="modalCustomizerForm" onchange="calculateModalPrice('${item.id}')">
               <div style="margin-bottom: 0.8rem;">
-                <label for="modalGauge" style="font-size: 0.82rem; font-weight: 700; color: #0f172a;">Stainless Steel Grade & Gauge:</label>
+                <label for="modalGauge" style="font-size: 0.82rem; font-weight: 700; color: #ffffff;">Stainless Steel Grade & Gauge:</label>
                 <select id="modalGauge" class="form-control" style="padding: 0.4rem 0.8rem; font-size: 0.85rem; margin-top: 0.2rem;" aria-label="Stainless Steel Grade and Gauge">
                   <option value="1.0" selected>SS 304 Food Grade - 16 Gauge Heavy Duty</option>
                   <option value="0.88">SS 304 Food Grade - 18 Gauge Standard</option>
@@ -1982,7 +1982,7 @@ function openSpecModal(id) {
               </div>
 
               <div style="margin-bottom: 0.8rem;">
-                <label for="modalFuel" style="font-size: 0.82rem; font-weight: 700; color: #0f172a;">Power / Fuel Configuration:</label>
+                <label for="modalFuel" style="font-size: 0.82rem; font-weight: 700; color: #ffffff;">Power / Fuel Configuration:</label>
                 <select id="modalFuel" class="form-control" style="padding: 0.4rem 0.8rem; font-size: 0.85rem; margin-top: 0.2rem;" aria-label="Power or Fuel Configuration">
                   <option value="standard" selected>Standard (${item.fuel})</option>
                   <option value="custom_png">Commercial PNG Pipeline Fitting</option>
@@ -1991,20 +1991,20 @@ function openSpecModal(id) {
               </div>
 
               <div style="margin-bottom: 1.2rem;">
-                <label style="font-size: 0.82rem; font-weight: 700; color: #0f172a;">Custom Options / Add-ons:</label>
+                <label style="font-size: 0.82rem; font-weight: 700; color: #ffffff;">Custom Options / Add-ons:</label>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; margin-top: 0.3rem;">
-                  <label for="addWheels" style="font-size: 0.78rem; display: flex; align-items: center; gap: 0.3rem;">
+                  <label for="addWheels" style="font-size: 0.78rem; display: flex; align-items: center; gap: 0.3rem; color: #cbd5e1;">
                     <input type="checkbox" id="addWheels" value="2500" aria-label="Lockable Castor Wheels"> Lockable Castor Wheels (+₹2,500)
                   </label>
-                  <label for="addShelf" style="font-size: 0.78rem; display: flex; align-items: center; gap: 0.3rem;">
+                  <label for="addShelf" style="font-size: 0.78rem; display: flex; align-items: center; gap: 0.3rem; color: #cbd5e1;">
                     <input type="checkbox" id="addShelf" value="3500" aria-label="Overhead SS Shelf"> Overhead SS Shelf (+₹3,500)
                   </label>
                 </div>
               </div>
 
-              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.8rem; border-top: 1px solid #e2e8f0;">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.8rem; border-top: 1px solid rgba(255, 255, 255, 0.15);">
                 <div>
-                  <span style="font-size: 0.75rem; color: #64748b; text-transform: uppercase; font-weight: 700; display: block;">Customized Price:</span>
+                  <span style="font-size: 0.75rem; color: #cbd5e1; text-transform: uppercase; font-weight: 700; display: block;">Customized Price:</span>
                   <span id="modalCalculatedPrice" style="font-size: 1.4rem; font-weight: 800; color: var(--accent-hover);">${item.priceEstimate}</span>
                 </div>
                 <button type="button" class="btn btn-primary" onclick="addModalCustomToQuote('${item.id}')">
@@ -2300,7 +2300,8 @@ function handleContactSubmit(e) {
 
   const name = nameEl ? nameEl.value : 'Client';
   const emailInput = emailEl ? emailEl.value : '';
-  const phoneInput = phoneEl ? phoneEl.value : '';
+  const rawPhone = phoneEl ? phoneEl.value.trim() : '';
+  const phoneInput = (rawPhone && !rawPhone.startsWith('+')) ? `+91 ${rawPhone}` : rawPhone;
   const kType = kTypeEl ? kTypeEl.value : 'Commercial Kitchen Setup';
   const msg = msgEl ? msgEl.value : '';
 
@@ -2338,7 +2339,8 @@ function sendContactWhatsApp() {
 
   const name = nameEl ? nameEl.value || 'Client' : 'Client';
   const emailInput = emailEl ? emailEl.value : '';
-  const phoneInput = phoneEl ? phoneEl.value || '' : '';
+  const rawPhone = phoneEl ? phoneEl.value.trim() : '';
+  const phoneInput = (rawPhone && !rawPhone.startsWith('+')) ? `+91 ${rawPhone}` : rawPhone;
   const kType = kTypeEl ? kTypeEl.value || 'Commercial Kitchen Setup' : 'Commercial Kitchen Setup';
   const msg = msgEl ? msgEl.value || '' : '';
 
@@ -2353,6 +2355,109 @@ function sendContactWhatsApp() {
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
   window.open(url, '_blank');
 }
+
+// ==========================================================================
+// GOOGLE BUSINESS PROFILE GALLERY & LIGHTBOX MODAL CONTROLLER
+// ==========================================================================
+const gmbGalleryItems = [
+  {
+    src: 'images/installation_cloud_kitchen.webp',
+    alt: 'Cloud Kitchen Stainless Steel Equipment Installation Bangalore - BKS Industries',
+    title: 'Cloud Kitchen Setup — Electronic City',
+    desc: 'Complete SS 304 work tables, 4-burner gas ranges, and custom exhaust hood installation.',
+    location: 'Electronic City, Bengaluru'
+  },
+  {
+    src: 'images/installation_dosa_bhatti.webp',
+    alt: 'Live Cooking Dosa Counter Installation Bangalore - BKS Industries',
+    title: 'Live Dosa & Cooking Counter — Rajajinagar',
+    desc: '16mm polished steel Dosa Bhatti tawa paired with glass guard Bain Marie food warmers.',
+    location: 'Rajajinagar, Bengaluru'
+  },
+  {
+    src: 'images/installation_bakery.webp',
+    alt: 'Industrial Bakery Unit Setup & Machinery Installation Bangalore - BKS Industries',
+    title: 'Commercial Bakery Setup — Yeshwanthpur',
+    desc: 'Heavy-duty 3-deck stone baking ovens and 50kg spiral dough kneader machinery line.',
+    location: 'Yeshwanthpur, Bengaluru'
+  },
+  {
+    src: 'images/exhaust_hood.webp',
+    alt: 'Commercial Kitchen Exhaust Hood Ventilation Installation Bangalore - BKS Industries',
+    title: 'Exhaust Hood & GI Ducting — Whitefield',
+    desc: 'SS wall-mounted baffle filter exhaust hood paired with high static centrifugal blower.',
+    location: 'Whitefield, Bengaluru'
+  },
+  {
+    src: 'images/vertical_chiller.webp',
+    alt: 'Commercial Refrigeration Cold Line & Vertical Chiller Installation Bangalore - BKS Industries',
+    title: 'Refrigeration Cold Storage — Indiranagar',
+    desc: 'Vertical 4-door SS 304 reach-in refrigerators and under-counter chilled prep tables.',
+    location: 'Indiranagar, Bengaluru'
+  },
+  {
+    src: 'images/sink_unit.webp',
+    alt: 'Heavy Duty Pot Wash Sink Unit Sanitation Line Installation Bangalore - BKS Industries',
+    title: 'Pot Wash & Sanitation Line — Peenya',
+    desc: 'Triple bowl SS 304 wash-rinse-sanitize sink units and heavy pre-rinse spring shower taps.',
+    location: 'Peenya Industrial Area, Bengaluru'
+  }
+];
+
+let currentGmbIndex = 0;
+
+function openGmbLightbox(index) {
+  if (index < 0 || index >= gmbGalleryItems.length) return;
+  currentGmbIndex = index;
+  updateGmbLightboxContent();
+  const modal = document.getElementById('gmbLightbox');
+  if (modal) {
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeGmbLightbox() {
+  const modal = document.getElementById('gmbLightbox');
+  if (modal) {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+}
+
+function changeGmbSlide(direction) {
+  currentGmbIndex = (currentGmbIndex + direction + gmbGalleryItems.length) % gmbGalleryItems.length;
+  updateGmbLightboxContent();
+}
+
+function updateGmbLightboxContent() {
+  const item = gmbGalleryItems[currentGmbIndex];
+  if (!item) return;
+  
+  const imgEl = document.getElementById('gmbLightboxImg');
+  const titleEl = document.getElementById('gmbLightboxTitle');
+  const descEl = document.getElementById('gmbLightboxDesc');
+  
+  if (imgEl) {
+    imgEl.src = item.src;
+    imgEl.alt = item.alt;
+  }
+  if (titleEl) titleEl.textContent = item.title;
+  if (descEl) descEl.textContent = `${item.location} • ${item.desc}`;
+}
+
+// Keyboard Controls for Lightbox
+document.addEventListener('keydown', function(e) {
+  const modal = document.getElementById('gmbLightbox');
+  if (modal && modal.classList.contains('active')) {
+    if (e.key === 'Escape') closeGmbLightbox();
+    if (e.key === 'ArrowLeft') changeGmbSlide(-1);
+    if (e.key === 'ArrowRight') changeGmbSlide(1);
+  }
+});
+
 
 
 
